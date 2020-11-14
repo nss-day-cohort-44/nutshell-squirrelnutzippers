@@ -29,9 +29,25 @@
           "id": 2,
           "activeUserId": 1,
           "userId": 3
+      },
+      {
+          "id": 3,
+          "activeUserId": 2,
+          "userId": 4
       }
 
   ],
   "tasks": [],
-  "messages": []
+  "messages": [ 
+    {
+      "id": 1,
+      "userId": 1,
+      "text": "What's up?"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "text": "not much"
+    }
+  ]
 }

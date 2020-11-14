@@ -3,6 +3,7 @@ import { RegisterForm } from "./auth/RegisterForm.js";
 import { Nutshell } from "./Nutshell.js";
 import { getActiveuser } from "./users/UserProvider.js";
 
+const eventHub = document.querySelector(".container");
 /*
     1. Check if the user is authenticated by looking in session storage for `activeUser`
     2. If so, render the Nutshell component
@@ -27,6 +28,5 @@ const loadApp = () => {
 
 loadApp();
 
-const eventHub = document.querySelector(".container");
 // listen for login/logout
 eventHub.addEventListener("userAuthenticated", loadApp);

@@ -1,4 +1,5 @@
 @import "./nav.css";
+@import "./messages.css";
 
 /* LIGHT THEME DEFAULT */
 :root {
@@ -18,4 +19,10 @@ body {
 [data-theme="dark"] {
   --primary-color: rgb(56, 54, 39);
   --primary-text: white;
+}
+
+.card {
+  border: 1px solid lightgray;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
