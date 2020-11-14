@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "email": "bryan@bryan.com",
+      "id": 1
+    },
+    {
+      "email": "madi@madi.com",
+      "id": 2
+    },
+    {
+      "email": "scott@scott.com",
+      "id": 3
+    },
+    {
+      "email": "jisie@jisie.com",
+      "id": 4
+    }
+  ],
+  "events": [],
+  "news": [],
+  "friends": [
+      {
+          "id": 1,
+          "activeUserId": 1,
+          "userId": 2
+      },
+      {
+          "id": 2,
+          "activeUserId": 1,
+          "userId": 3
+      }
+
+  ],
+  "tasks": [],
+  "messages": []
+}
