@@ -15,10 +15,18 @@ const isAuthenticated = () => {
   return sessionStorage.getItem("activeUser");
 };
 
-if (isAuthenticated()) {
-  const activeUserId = isAuthenticated();
-  getActiveuser(activeUserId).then(Nutshell);
-} else {
-  LoginForm();
-  RegisterForm();
-}
+const loadApp = () => {
+  if (isAuthenticated()) {
+    const activeUserId = isAuthenticated();
+    getActiveuser(activeUserId).then(Nutshell);
+  } else {
+    LoginForm();
+    RegisterForm();
+  }
+};
+
+loadApp();
+
+const eventHub = document.querySelector(".container");
+// listen for login/logout
+eventHub.addEventListener("userAuthenticated", loadApp);

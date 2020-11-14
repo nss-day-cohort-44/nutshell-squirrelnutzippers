@@ -1,5 +1,3 @@
-const eventHub = document.querySelector(".container");
-
 export const ThemeToggle = () => {
   return `
     <div class="theme-switch-wrapper">

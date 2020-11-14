@@ -22,7 +22,7 @@ eventHub.addEventListener("click", (e) => {
 });
 
 const render = () => {
-  contentTarget.innerHTML += `
+  contentTarget.innerHTML = `
         <section class="login">
             <input id="login__email" type="text" placeholder="Enter your email">
             <button id="login__button">Log In</button>
