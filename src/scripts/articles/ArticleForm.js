@@ -28,16 +28,21 @@ eventHub.addEventListener("click", (event) => {
     const titleInput = document.querySelector("#article--title").value;
     const synopsisInput = document.querySelector("#article--synopsis").value;
     const urlInput = document.querySelector("#article--url").value;
-    const user = useActiveUser();
 
-    const newArticle = {
-      title: titleInput,
-      synopsis: synopsisInput,
-      url: urlInput,
-      timestamp: Date.now(),
-      userId: user.id,
-    };
+    if (titleInput === "" || synopsisInput === "" || urlInput === "") {
+      alert("Please Fill out all Fields in the News Form");
+    } else {
+      const user = useActiveUser();
 
-    saveArticle(newArticle);
+      const newArticle = {
+        title: titleInput,
+        synopsis: synopsisInput,
+        url: urlInput,
+        timestamp: Date.now(),
+        userId: user.id,
+      };
+
+      saveArticle(newArticle);
+    }
   }
 });

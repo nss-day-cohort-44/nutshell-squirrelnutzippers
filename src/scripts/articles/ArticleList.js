@@ -11,7 +11,6 @@ export const ArticleList = () => {
   getArticles().then(() => {
     const articleData = useArticles();
     const activeUser = useActiveUser();
-    console.log("activeUser: ", activeUser);
     // group active user and friend ids
     const userAndFriendIds = activeUser.friends
       .map((cv) => cv.id)
@@ -27,17 +26,18 @@ export const ArticleList = () => {
 };
 
 const render = () => {
+  // location on DOM to Render ?? SHOULD THIS BE DECIDED BY COMPONENT or PARENT???
   const contentTarget = document.querySelector("#articles");
-  console.log("articles array", articlesArray);
 
   const articlesAsHTML = articlesArray
+    .sort((a, b) => b.timestamp - a.timestamp)
     .map((article) => ArticleCard(article))
     .join("");
 
   contentTarget.innerHTML = `
     <h1 class='section--header'>
         News Articles
-        <button id="article--add-edit">+add</button>
+        <button id="article--add-edit">+ New Article</button>
     </h1>
     <div id="articleForm__container"></div>
     <div class='article--list'>
