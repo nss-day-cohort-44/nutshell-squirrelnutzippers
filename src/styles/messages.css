@@ -1,3 +1,12 @@
+#messages {
+  border: 1px solid lightgray;
+}
+
+.message--list {
+  overflow: auto;
+  height: 300px;
+}
+
 .message {
   border-radius: 0.5rem;
   display: flex;
