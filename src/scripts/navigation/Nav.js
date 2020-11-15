@@ -36,7 +36,9 @@ eventHub.addEventListener("click", (event) => {
 const clearContainers = () => {
   const navContainer = document.querySelector("#nav");
   const messagesContainer = document.querySelector("#messages");
+  const articlesContainer = document.querySelector("#articles");
 
   navContainer.innerHTML = "";
   messagesContainer.innerHTML = "";
+  articlesContainer.innerHTML = "";
 };

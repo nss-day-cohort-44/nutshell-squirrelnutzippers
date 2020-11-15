@@ -13,7 +13,9 @@ export const ArticleCard = (articleObj) => {
     <div>${date}</div>
     ${
       activeUser.id === articleObj.userId
-        ? `<button id="delete-article--${articleObj.id}">delete article</button>`
+        ? `<button id="delete-article--${articleObj.id}">delete</button>
+        <button id="edit-article--${articleObj.id}">edit</button>
+        `
         : ""
     }
   </div>
@@ -26,5 +28,14 @@ eventHub.addEventListener("click", (event) => {
   if (event.target.id.startsWith("delete-article--")) {
     const [prefix, articleId] = event.target.id.split("--");
     deleteArticle(parseInt(articleId));
+  }
+  if (event.target.id.startsWith("edit-article--")) {
+    const [prefix, articleId] = event.target.id.split("--");
+    const articleEditEvent = new CustomEvent("articleEditClicked", {
+      detail: {
+        articleId: parseInt(articleId),
+      },
+    });
+    eventHub.dispatchEvent(articleEditEvent);
   }
 });

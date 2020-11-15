@@ -44,12 +44,28 @@
       "id": 3
     },
     {
+      "id": 4,
       "title": "Another Scott Article",
-      "synopsis": "blah blah",
+      "synopsis": "blah blah blaze!!",
       "url": "www.scott.com",
-      "timestamp": 1605459739025,
-      "userId": 3,
-      "id": 4
+      "timestamp": 1605481831175,
+      "userId": 3
+    },
+    {
+      "id": 5,
+      "title": "This is Scott's new Article",
+      "synopsis": "there",
+      "url": "scott.net",
+      "timestamp": 1605481873232,
+      "userId": 3
+    },
+    {
+      "title": "Madi's Article",
+      "synopsis": "I will handle all of your WSL installations!",
+      "url": "madi.com",
+      "timestamp": 1605482072462,
+      "userId": 2,
+      "id": 6
     }
   ],
   "friends": [
@@ -134,6 +150,12 @@
       "text": "different window",
       "timestamp": 1605418949478,
       "id": 10
+    },
+    {
+      "userId": 3,
+      "text": "HEY! it's me... SCOTT",
+      "timestamp": 1605462191889,
+      "id": 11
     }
   ]
 }
