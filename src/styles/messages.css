@@ -1,0 +1,23 @@
+#messages {
+  border: 1px solid lightgray;
+}
+
+.message--list {
+  overflow: auto;
+  height: 300px;
+}
+
+.message {
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.activeUser {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+.sender {
+  background-color: var(--primary-color);
+}

@@ -1,0 +1,90 @@
+{
+  "users": [
+    {
+      "email": "bryan@bryan.com",
+      "id": 1
+    },
+    {
+      "email": "madi@madi.com",
+      "id": 2
+    },
+    {
+      "email": "scott@scott.com",
+      "id": 3
+    },
+    {
+      "email": "jisie@jisie.com",
+      "id": 4
+    }
+  ],
+  "events": [],
+  "articles": [],
+  "friends": [
+    {
+      "id": 1,
+      "activeUserId": 1,
+      "userId": 2
+    },
+    {
+      "id": 2,
+      "activeUserId": 1,
+      "userId": 3
+    },
+    {
+      "id": 3,
+      "activeUserId": 2,
+      "userId": 4
+    }
+  ],
+  "tasks": [],
+  "messages": [
+    {
+      "userId": 2,
+      "text": "test1",
+      "timestamp": 1605400862618,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "text": "test2",
+      "timestamp": 1605400871082,
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "text": "test 3",
+      "timestamp": 1605400876987,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "text": "test4",
+      "timestamp": 1605400885307,
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "text": "hello",
+      "timestamp": 1605401056360,
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "text": "more messages",
+      "timestamp": 1605401380673,
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "text": "here we go",
+      "timestamp": 1605401387114,
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "text": "new",
+      "timestamp": 1605401596297,
+      "id": 8
+    }
+  ]
+}
