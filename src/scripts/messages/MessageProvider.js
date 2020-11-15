@@ -26,6 +26,12 @@ export const saveMessage = (messageObj) => {
   }).then(dispatchStateChangeEvent);
 };
 
+export const deleteMessage = (id) => {
+  return fetch(`http://localhost:8088/messages/${id}`, {
+    method: "DELETE",
+  }).then(dispatchStateChangeEvent);
+};
+
 export const useMessages = () => {
   return messages.slice();
 };
