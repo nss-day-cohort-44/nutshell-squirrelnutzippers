@@ -21,6 +21,7 @@ const render = () => {
   const contentTarget = document.querySelector("#messages");
   const messagesAsHTML = messages
     .map((message) => MessageCard(message))
+    .reverse()
     .join("");
 
   contentTarget.innerHTML =
@@ -33,6 +34,7 @@ const render = () => {
 
 // Reload messages after message add, delete, update
 eventHub.addEventListener("messageStateChanged", MessageList);
+eventHub.addEventListener("friendsStateChanged", MessageList);
 
 // Reload messages if messages changed in another tab
 window.addEventListener("storage", () => {

@@ -3,6 +3,8 @@
 }
 
 .message--list {
+  display: flex;
+  flex-direction: column-reverse;
   overflow: auto;
   height: 300px;
 }
@@ -19,10 +21,17 @@
 }
 
 .sender {
+  border: none;
   background-color: var(--primary-color);
   color: var(--primary-text);
   border-radius: 0.5rem;
   padding: 0.2rem 0.5rem;
+}
+button.sender {
+  background-color: gold;
+}
+button.sender:hover {
+  background-color: orange;
 }
 
 .activeUser > div.sender {

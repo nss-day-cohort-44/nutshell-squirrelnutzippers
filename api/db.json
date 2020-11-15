@@ -21,19 +21,9 @@
   "articles": [],
   "friends": [
     {
-      "id": 1,
-      "activeUserId": 1,
-      "userId": 2
-    },
-    {
-      "id": 2,
-      "activeUserId": 1,
-      "userId": 3
-    },
-    {
-      "id": 3,
       "activeUserId": 2,
-      "userId": 4
+      "userId": 4,
+      "id": 1
     }
   ],
   "tasks": [],
@@ -52,12 +42,6 @@
     },
     {
       "userId": 2,
-      "text": "test 3",
-      "timestamp": 1605400876987,
-      "id": 3
-    },
-    {
-      "userId": 2,
       "text": "did you get my last message?",
       "timestamp": 1605404567884,
       "id": 4
@@ -67,6 +51,18 @@
       "text": "yup! loud and clear",
       "timestamp": 1605404593517,
       "id": 5
+    },
+    {
+      "userId": 4,
+      "text": "hello!!",
+      "timestamp": 1605413239544,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "text": "is this cool?",
+      "timestamp": 1605414251899,
+      "id": 7
     }
   ]
 }
