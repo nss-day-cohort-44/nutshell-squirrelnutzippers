@@ -20,4 +20,11 @@
 
 .sender {
   background-color: var(--primary-color);
+  color: var(--primary-text);
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.activeUser > div.sender {
+  background-color: var(--active-user-bkg);
 }

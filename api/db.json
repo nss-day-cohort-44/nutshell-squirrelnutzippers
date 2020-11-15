@@ -57,34 +57,16 @@
       "id": 3
     },
     {
-      "userId": 1,
-      "text": "test4",
-      "timestamp": 1605400885307,
+      "userId": 2,
+      "text": "did you get my last message?",
+      "timestamp": 1605404567884,
       "id": 4
     },
     {
-      "userId": 2,
-      "text": "hello",
-      "timestamp": 1605401056360,
+      "userId": 1,
+      "text": "yup! loud and clear",
+      "timestamp": 1605404593517,
       "id": 5
-    },
-    {
-      "userId": 2,
-      "text": "more messages",
-      "timestamp": 1605401380673,
-      "id": 6
-    },
-    {
-      "userId": 2,
-      "text": "here we go",
-      "timestamp": 1605401387114,
-      "id": 7
-    },
-    {
-      "userId": 2,
-      "text": "new",
-      "timestamp": 1605401596297,
-      "id": 8
     }
   ]
 }
