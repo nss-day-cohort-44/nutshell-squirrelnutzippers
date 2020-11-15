@@ -1,7 +1,7 @@
 import { LoginForm } from "./auth/LoginForm.js";
 import { RegisterForm } from "./auth/RegisterForm.js";
 import { Nutshell } from "./Nutshell.js";
-import { getActiveuser } from "./users/UserProvider.js";
+import { getActiveUser } from "./users/UserProvider.js";
 
 const eventHub = document.querySelector(".container");
 /*
@@ -18,8 +18,7 @@ const isAuthenticated = () => {
 
 const loadApp = () => {
   if (isAuthenticated()) {
-    const activeUserId = isAuthenticated();
-    getActiveuser(activeUserId).then(Nutshell);
+    getActiveUser().then(Nutshell);
   } else {
     LoginForm();
     RegisterForm();
