@@ -1,7 +1,9 @@
 import { deleteArticle } from "./ArticleProvider.js";
+import { useActiveUser } from "../users/UserProvider.js";
 
 export const ArticleCard = (articleObj) => {
   const date = new Date(articleObj.timestamp).toDateString();
+  const activeUser = useActiveUser();
 
   const articleAsHTML = `
   <div class="article card">
@@ -9,7 +11,11 @@ export const ArticleCard = (articleObj) => {
     <div>${articleObj.synopsis}</div>
     <div>${articleObj.url}</div>
     <div>${date}</div>
-    <button id="delete-article--${articleObj.id}">delete article</button>
+    ${
+      activeUser.id === articleObj.userId
+        ? `<button id="delete-article--${articleObj.id}">delete article</button>`
+        : ""
+    }
   </div>
   `;
   return articleAsHTML;
