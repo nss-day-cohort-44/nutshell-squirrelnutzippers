@@ -18,12 +18,65 @@
     }
   ],
   "events": [],
-  "articles": [],
+  "articles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Bryan's Test Article",
+      "synopsis": "This is some boilerplate text....",
+      "url": "bryan.com",
+      "timestamp": 1605404567884
+    },
+    {
+      "title": "Jisie's Test Article",
+      "synopsis": "this is the synopsis",
+      "url": "jisie.com",
+      "timestamp": 1605457156139,
+      "userId": 4,
+      "id": 2
+    },
+    {
+      "title": "Scott's Article",
+      "synopsis": "Here a sample...",
+      "url": "www.scott.com",
+      "timestamp": 1605459568144,
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "title": "Another Scott Article",
+      "synopsis": "blah blah",
+      "url": "www.scott.com",
+      "timestamp": 1605459739025,
+      "userId": 3,
+      "id": 4
+    }
+  ],
   "friends": [
     {
       "activeUserId": 2,
       "userId": 4,
       "id": 1
+    },
+    {
+      "activeUserId": 2,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "activeUserId": 4,
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "activeUserId": 4,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "activeUserId": 3,
+      "userId": 1,
+      "id": 5
     }
   ],
   "tasks": [],
@@ -63,6 +116,24 @@
       "text": "is this cool?",
       "timestamp": 1605414251899,
       "id": 7
+    },
+    {
+      "userId": 2,
+      "text": "testing",
+      "timestamp": 1605418759113,
+      "id": 8
+    },
+    {
+      "userId": 4,
+      "text": "New MESSAGE!!!",
+      "timestamp": 1605418901885,
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "text": "different window",
+      "timestamp": 1605418949478,
+      "id": 10
     }
   ]
 }
