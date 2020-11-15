@@ -58,6 +58,14 @@
       "url": "scott.net",
       "timestamp": 1605481873232,
       "userId": 3
+    },
+    {
+      "title": "Madi's Article",
+      "synopsis": "I will handle all of your WSL installations!",
+      "url": "madi.com",
+      "timestamp": 1605482072462,
+      "userId": 2,
+      "id": 6
     }
   ],
   "friends": [
