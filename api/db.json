@@ -29,11 +29,11 @@
   "articles": [
     {
       "id": 1,
-      "userId": 1,
-      "title": "Bryan's Test Article",
+      "title": "Bryan's Test Edited Article",
       "synopsis": "This is some boilerplate text....",
       "url": "bryan.com",
-      "timestamp": 1605404567884
+      "timestamp": 1605533425701,
+      "userId": 1
     },
     {
       "title": "Jisie's Test Article",
