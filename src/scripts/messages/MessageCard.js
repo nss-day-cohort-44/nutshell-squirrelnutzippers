@@ -5,14 +5,18 @@ import { deleteMessage } from "./MessageProvider.js";
 const eventHub = document.querySelector(".container");
 
 export const MessageCard = (messageObj) => {
+  // get current user
   const activeUser = useActiveUser();
+  // get message sender
   const sender = useUsers().find((user) => user.id === messageObj.userId);
-  const senderDisplay = sender.email.split("@")[0];
+  const senderDisplay = sender.username;
 
+  // is this message from the current user?
   const isActiveUserMessage = () => {
     return activeUser.id === sender.id;
   };
 
+  // is this message from a friend of the user?
   const isFriendMessage = () => {
     let isFriend = false;
     if (activeUser.friends.length > 0) {
@@ -25,6 +29,8 @@ export const MessageCard = (messageObj) => {
 
   let messageClass = "";
 
+  // is this a private message? - if so, is it private to or from the current user?
+  // TODO: NEED LOGIC IN HERE TO PREVENT SOMEONE FROM DM'ing a non-friend
   const isPrivateMessage = () => {
     let isPrivate = false;
     if (messageObj.hasOwnProperty("messageUserId")) {
