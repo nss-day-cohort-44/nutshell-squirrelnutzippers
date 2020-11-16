@@ -37,8 +37,10 @@ const clearContainers = () => {
   const navContainer = document.querySelector("#nav");
   const messagesContainer = document.querySelector("#messages");
   const articlesContainer = document.querySelector("#articles");
+  const eventsContainer = document.querySelector("#events");
 
   navContainer.innerHTML = "";
   messagesContainer.innerHTML = "";
   articlesContainer.innerHTML = "";
+  eventsContainer.innerHTML = "";
 };

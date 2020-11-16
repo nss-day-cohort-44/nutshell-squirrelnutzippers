@@ -17,7 +17,15 @@
       "id": 4
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "id": 1,
+      "name": "Thanksgiving",
+      "date": "2020-11-19",
+      "location": "Bahamas",
+      "userId": 1
+    }
+  ],
   "articles": [
     {
       "id": 1,
@@ -60,12 +68,12 @@
       "userId": 3
     },
     {
+      "id": 6,
       "title": "Madi's Article",
       "synopsis": "I will handle all of your WSL installations!",
-      "url": "madi.com",
-      "timestamp": 1605482072462,
-      "userId": 2,
-      "id": 6
+      "url": "madipeper.com",
+      "timestamp": 1605490211882,
+      "userId": 2
     }
   ],
   "friends": [
@@ -93,6 +101,11 @@
       "activeUserId": 3,
       "userId": 1,
       "id": 5
+    },
+    {
+      "activeUserId": 1,
+      "userId": 2,
+      "id": 6
     }
   ],
   "tasks": [],
@@ -156,6 +169,12 @@
       "text": "HEY! it's me... SCOTT",
       "timestamp": 1605462191889,
       "id": 11
+    },
+    {
+      "userId": 2,
+      "text": "test",
+      "timestamp": 1605490258562,
+      "id": 12
     }
   ]
 }
