@@ -90,3 +90,15 @@ button:hover {
   background-color: var(--button-delete);
   color: var(--button-text);
 }
+
+/* AUTH - Login-Register */
+.auth > section {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.center {
+  text-align: center;
+}

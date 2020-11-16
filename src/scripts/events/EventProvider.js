@@ -25,7 +25,7 @@ export const saveEvent = (eventObj) => {
   }).then(dispatchStateChangeEvent);
 };
 
-export const updateArticle = (eventObj) => {
+export const updateEvent = (eventObj) => {
   return fetch(`http://localhost:8088/events/${eventObj.id}`, {
     method: "PUT",
     headers: {
@@ -35,7 +35,7 @@ export const updateArticle = (eventObj) => {
   }).then(dispatchStateChangeEvent);
 };
 
-export const deleteEvents = (id) => {
+export const deleteEvent = (id) => {
   return fetch(`http://localhost:8088/events/${id}`, {
     method: "DELETE",
   }).then(dispatchStateChangeEvent);

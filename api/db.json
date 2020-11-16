@@ -2,19 +2,28 @@
   "users": [
     {
       "email": "bryan@bryan.com",
+      "username": "bryan",
       "id": 1
     },
     {
       "email": "madi@madi.com",
+      "username": "madi",
       "id": 2
     },
     {
       "email": "scott@scott.com",
+      "username": "scott",
       "id": 3
     },
     {
       "email": "jisie@jisie.com",
+      "username": "jisie",
       "id": 4
+    },
+    {
+      "username": "tester",
+      "email": "tester@tester.com",
+      "id": 5
     }
   ],
   "events": [
@@ -172,9 +181,17 @@
     },
     {
       "userId": 2,
-      "text": "test",
-      "timestamp": 1605490258562,
+      "text": "@jisie does this work??",
+      "timestamp": 1605551000277,
+      "messageUserId": 4,
       "id": 12
+    },
+    {
+      "userId": 2,
+      "text": "@tester can you see this?",
+      "timestamp": 1605557609309,
+      "messageUserId": 5,
+      "id": 13
     }
   ]
 }

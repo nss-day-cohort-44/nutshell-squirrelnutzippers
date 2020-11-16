@@ -1,12 +1,24 @@
 import { EventCard } from "./EventCard.js";
 import { getEvents, useEvents } from "./EventProvider.js";
+import { useActiveUser } from "../users/UserProvider.js";
 
 let eventsArray = [];
 
 export const EventList = () => {
   getEvents().then(() => {
-    const allEvents = useEvents();
-    eventsArray = allEvents;
+    const eventData = useEvents();
+    const activeUser = useActiveUser();
+    // group active user and friend ids
+    const userAndFriendIds = activeUser.friends
+      .map((cv) => cv.id)
+      .concat(activeUser.id);
+
+    // get all articles from active user and friends
+    const filteredEvents = eventData.filter((event) =>
+      userAndFriendIds.includes(event.userId)
+    );
+    eventsArray = filteredEvents;
+
     render();
   });
 };
@@ -14,7 +26,15 @@ export const EventList = () => {
 const render = () => {
   // location on DOM to Render ?? SHOULD THIS BE DECIDED BY COMPONENT or PARENT???
   const contentTarget = document.querySelector("#events");
-  const eventsAsHTML = eventsArray.map((event) => EventCard(event)).join("");
+  let eventsAsHTML = "";
+
+  // CHECK IF USER HAS ANY EVENTS
+  if (eventsArray.length === 0) {
+    eventsAsHTML = "No events saved";
+  } else {
+    eventsAsHTML = eventsArray.map((event) => EventCard(event)).join("");
+  }
+  // RENDER EVENTSHTML TO DOM
   contentTarget.innerHTML = `
     <h1 class='section--header'>
         Events

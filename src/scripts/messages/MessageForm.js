@@ -1,4 +1,4 @@
-import { useActiveUser } from "../users/UserProvider.js";
+import { useActiveUser, useUsers } from "../users/UserProvider.js";
 import { saveMessage } from "./MessageProvider.js";
 
 const eventHub = document.querySelector(".container");
@@ -21,6 +21,25 @@ eventHub.addEventListener("keydown", (event) => {
       text: event.target.value,
       timestamp: Date.now(),
     };
+    // check if message text starts with "@"
+    // if so, find username between @ and space
+    // get userId > append to newMessage
+
+    if (newMessage.text.startsWith("@")) {
+      const text = newMessage.text;
+      const username = text.split(/[@ ]/)[1];
+
+      console.log("username: ", username);
+      const messagedUser = useUsers().find(
+        (user) => user.username === username
+      );
+      console.log("messagedUser: ", messagedUser);
+      if (messagedUser) {
+        console.log("IN THE CONDITION!!!");
+        newMessage.messageUserId = messagedUser.id;
+      }
+    }
+
     // save message
     saveMessage(newMessage);
   }

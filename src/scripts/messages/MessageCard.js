@@ -23,9 +23,30 @@ export const MessageCard = (messageObj) => {
     return isFriend;
   };
 
-  if (isActiveUserMessage()) {
+  let messageClass = "";
+
+  const isPrivateMessage = () => {
+    let isPrivate = false;
+    if (messageObj.hasOwnProperty("messageUserId")) {
+      if (
+        messageObj.messageUserId === activeUser.id ||
+        messageObj.userId === activeUser.id
+      ) {
+        isPrivate = false;
+        messageClass = "private";
+      } else {
+        isPrivate = true;
+      }
+    }
+    return isPrivate;
+  };
+
+  console.log("isPrivateMessage: ", isPrivateMessage());
+  if (isPrivateMessage()) {
+    return;
+  } else if (isActiveUserMessage()) {
     return `
-    <div class="message card activeUser">
+    <div class="message card activeUser ${messageClass}">
     <div class="sender">${senderDisplay}</div>
     <div>${messageObj.text}</div>
     <button id="message-delete--${messageObj.id}" class="button--delete">x</button>
@@ -33,14 +54,14 @@ export const MessageCard = (messageObj) => {
     `;
   } else if (isFriendMessage()) {
     return `
-    <div class="message card">
+    <div class="message card ${messageClass}">
     <div class="sender">${senderDisplay}</div>
     <div>${messageObj.text}</div>
     </div>
     `;
   } else {
     return `
-    <div class="message card">
+    <div class="message card ${messageClass}">
     <button id="message-userId--${messageObj.userId}" class="sender">${senderDisplay}</button>
     <div>${messageObj.text}</div>
     </div>

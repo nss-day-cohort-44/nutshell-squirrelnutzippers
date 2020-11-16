@@ -21,3 +21,5 @@ export const EventCard = (eventObj) => {
 
   return eventAsHTML;
 };
+
+// event listeners for delete/edit/weather
