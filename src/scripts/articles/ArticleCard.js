@@ -13,8 +13,8 @@ export const ArticleCard = (articleObj) => {
     <div>${date}</div>
     ${
       activeUser.id === articleObj.userId
-        ? `<button id="delete-article--${articleObj.id}">delete</button>
-        <button id="edit-article--${articleObj.id}">edit</button>
+        ? `<button id="delete-article--${articleObj.id}" class="delete">DELETE</button>
+        <button id="edit-article--${articleObj.id}">EDIT</button>
         `
         : ""
     }

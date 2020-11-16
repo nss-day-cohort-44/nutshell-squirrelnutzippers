@@ -38,3 +38,8 @@ button.sender:hover {
 .activeUser > div.sender {
   background-color: var(--active-user-bkg);
 }
+
+.private {
+  background-color: teal;
+  color: white;
+}

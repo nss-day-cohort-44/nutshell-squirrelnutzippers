@@ -28,9 +28,9 @@
 
 .theme-switch {
   display: inline-block;
-  height: 26px;
+  height: 22px;
   position: relative;
-  width: 55px;
+  width: 48px;
 }
 
 .theme-switch input {
@@ -52,11 +52,11 @@
   background-color: #fff;
   bottom: 4px;
   content: "";
-  height: 18px;
+  height: 14px;
   left: 4px;
   position: absolute;
   transition: 0.4s;
-  width: 18px;
+  width: 14px;
 }
 
 input:checked + .slider {

@@ -2,30 +2,47 @@
   "users": [
     {
       "email": "bryan@bryan.com",
+      "username": "bryan",
       "id": 1
     },
     {
       "email": "madi@madi.com",
+      "username": "madi",
       "id": 2
     },
     {
       "email": "scott@scott.com",
+      "username": "scott",
       "id": 3
     },
     {
       "email": "jisie@jisie.com",
+      "username": "jisie",
       "id": 4
+    },
+    {
+      "username": "tester",
+      "email": "tester@tester.com",
+      "id": 5
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "id": 1,
+      "name": "Thanksgiving",
+      "date": "2020-11-19",
+      "location": "Bahamas",
+      "userId": 1
+    }
+  ],
   "articles": [
     {
       "id": 1,
-      "userId": 1,
-      "title": "Bryan's Test Article",
+      "title": "Bryan's Test Edited Article",
       "synopsis": "This is some boilerplate text....",
       "url": "bryan.com",
-      "timestamp": 1605404567884
+      "timestamp": 1605533425701,
+      "userId": 1
     },
     {
       "title": "Jisie's Test Article",
@@ -60,12 +77,12 @@
       "userId": 3
     },
     {
+      "id": 6,
       "title": "Madi's Article",
       "synopsis": "I will handle all of your WSL installations!",
-      "url": "madi.com",
-      "timestamp": 1605482072462,
-      "userId": 2,
-      "id": 6
+      "url": "madipeper.com",
+      "timestamp": 1605490211882,
+      "userId": 2
     }
   ],
   "friends": [
@@ -93,6 +110,11 @@
       "activeUserId": 3,
       "userId": 1,
       "id": 5
+    },
+    {
+      "activeUserId": 1,
+      "userId": 2,
+      "id": 6
     }
   ],
   "tasks": [],
@@ -156,6 +178,40 @@
       "text": "HEY! it's me... SCOTT",
       "timestamp": 1605462191889,
       "id": 11
+    },
+    {
+      "userId": 2,
+      "text": "@jisie does this work??",
+      "timestamp": 1605551000277,
+      "messageUserId": 4,
+      "id": 12
+    },
+    {
+      "userId": 2,
+      "text": "@tester can you see this?",
+      "timestamp": 1605557609309,
+      "messageUserId": 5,
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "text": "@jisie I hope madi doesn't see this",
+      "timestamp": 1605558308804,
+      "messageUserId": 4,
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "text": "@scott I hope Jisie and Madi don't see this",
+      "timestamp": 1605558339885,
+      "messageUserId": 3,
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "text": "HELLO EVERYONE!!",
+      "timestamp": 1605558346517,
+      "id": 16
     }
   ]
 }

@@ -5,14 +5,18 @@ import { deleteMessage } from "./MessageProvider.js";
 const eventHub = document.querySelector(".container");
 
 export const MessageCard = (messageObj) => {
+  // get current user
   const activeUser = useActiveUser();
+  // get message sender
   const sender = useUsers().find((user) => user.id === messageObj.userId);
-  const senderDisplay = sender.email.split("@")[0];
+  const senderDisplay = sender.username;
 
+  // is this message from the current user?
   const isActiveUserMessage = () => {
     return activeUser.id === sender.id;
   };
 
+  // is this message from a friend of the user?
   const isFriendMessage = () => {
     let isFriend = false;
     if (activeUser.friends.length > 0) {
@@ -23,9 +27,32 @@ export const MessageCard = (messageObj) => {
     return isFriend;
   };
 
-  if (isActiveUserMessage()) {
+  let messageClass = "";
+
+  // is this a private message? - if so, is it private to or from the current user?
+  // TODO: NEED LOGIC IN HERE TO PREVENT SOMEONE FROM DM'ing a non-friend
+  const isPrivateMessage = () => {
+    let isPrivate = false;
+    if (messageObj.hasOwnProperty("messageUserId")) {
+      if (
+        messageObj.messageUserId === activeUser.id ||
+        messageObj.userId === activeUser.id
+      ) {
+        isPrivate = false;
+        messageClass = "private";
+      } else {
+        isPrivate = true;
+      }
+    }
+    return isPrivate;
+  };
+
+  console.log("isPrivateMessage: ", isPrivateMessage());
+  if (isPrivateMessage()) {
+    return;
+  } else if (isActiveUserMessage()) {
     return `
-    <div class="message card activeUser">
+    <div class="message card activeUser ${messageClass}">
     <div class="sender">${senderDisplay}</div>
     <div>${messageObj.text}</div>
     <button id="message-delete--${messageObj.id}" class="button--delete">x</button>
@@ -33,14 +60,14 @@ export const MessageCard = (messageObj) => {
     `;
   } else if (isFriendMessage()) {
     return `
-    <div class="message card">
+    <div class="message card ${messageClass}">
     <div class="sender">${senderDisplay}</div>
     <div>${messageObj.text}</div>
     </div>
     `;
   } else {
     return `
-    <div class="message card">
+    <div class="message card ${messageClass}">
     <button id="message-userId--${messageObj.userId}" class="sender">${senderDisplay}</button>
     <div>${messageObj.text}</div>
     </div>

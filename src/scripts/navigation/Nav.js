@@ -15,9 +15,9 @@ const render = () => {
   contentTarget.innerHTML += `
     <nav class="nav__container">
       <div class="nav--logo">NUTSHELL</div>
-      <div>${userName}'s Dashboard</div>
       <div class="nav--toggle">${ThemeToggle()}</div>
-      <button id="logout">logout</button>
+      <div><i class="far fa-user"></i> ${userName}
+      <button id="logout">logout</button></div>
     </nav>
     `;
 };
@@ -37,8 +37,10 @@ const clearContainers = () => {
   const navContainer = document.querySelector("#nav");
   const messagesContainer = document.querySelector("#messages");
   const articlesContainer = document.querySelector("#articles");
+  const eventsContainer = document.querySelector("#events");
 
   navContainer.innerHTML = "";
   messagesContainer.innerHTML = "";
   articlesContainer.innerHTML = "";
+  eventsContainer.innerHTML = "";
 };
