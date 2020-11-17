@@ -1,6 +1,17 @@
 #messages {
-  border: 1px solid lightgray;
   position: relative;
+}
+
+.message--list::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+.message--list::-webkit-scrollbar-track {
+  background-color: var(--chat-bkg); /* color of the tracking area */
+}
+.message--list::-webkit-scrollbar-thumb {
+  background-color: rgb(117, 117, 117); /* color of the scroll thumb */
+  border-radius: 0.5rem; /* roundness of the scroll thumb */
+  border: 3px solid var(--primary-color); /* creates padding around scroll thumb */
 }
 
 .message--list {
@@ -8,6 +19,9 @@
   flex-direction: column-reverse;
   overflow: auto;
   height: 300px;
+  padding: 0.5rem;
+  border: 1px solid lightgray;
+  background-color: var(--chat-bkg);
 }
 
 .activeUser {

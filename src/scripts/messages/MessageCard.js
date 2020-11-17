@@ -40,6 +40,7 @@ export const MessageCard = (messageObj) => {
       ) {
         isPrivate = false;
         messageClass = "private";
+        // console.log(messageObj.text.split(/[@ ]/).slice(2).join(" "));
       } else {
         isPrivate = true;
       }
@@ -82,11 +83,6 @@ export const MessageCard = (messageObj) => {
     `;
   }
 };
-
-// <div class="message card ${messageClass}">
-// <button id="message-userId--${messageObj.userId}" class="sender">${senderDisplay}</button>
-// <div>${messageObj.text}</div>
-// </div>
 
 eventHub.addEventListener("click", (event) => {
   if (event.target.id.startsWith("message-delete")) {
