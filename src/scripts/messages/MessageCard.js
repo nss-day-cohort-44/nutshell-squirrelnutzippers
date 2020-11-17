@@ -48,7 +48,6 @@ export const MessageCard = (messageObj) => {
     return isPrivate;
   };
 
-  console.log("isPrivateMessage: ", isPrivateMessage());
   if (isPrivateMessage()) {
     return;
   } else if (isActiveUserMessage()) {
@@ -57,7 +56,7 @@ export const MessageCard = (messageObj) => {
       <div class="message--card activeUser ${messageClass}">
         <div>${messageObj.text}</div>
         </div>
-      <div class="message--icons__container">
+      <div class="icons__container">
         <i id="message-delete--${messageObj.id}" class="far fa-trash-alt"></i>
         <i id="message-edit--${messageObj.id}"class="far fa-edit"></i>
       </div>

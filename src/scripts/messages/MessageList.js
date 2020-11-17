@@ -8,13 +8,11 @@ const eventHub = document.querySelector(".container");
 let messages = [];
 
 export const MessageList = () => {
-  getMessages()
-    .then(getUsers)
-    .then(() => {
-      messages = useMessages();
-      render();
-      window.localStorage.setItem("chatUpdated", false);
-    });
+  getMessages().then(() => {
+    messages = useMessages();
+    render();
+    window.localStorage.setItem("chatUpdated", false);
+  });
 };
 
 const render = () => {

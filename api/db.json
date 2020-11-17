@@ -33,6 +33,20 @@
       "date": "2020-11-19",
       "location": "Bahamas",
       "userId": 1
+    },
+    {
+      "name": "Bryan's New and Final Event",
+      "date": "2020-11-19",
+      "location": "NSS",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "New Bryan EVENT",
+      "date": "2020-11-20",
+      "location": "Home",
+      "userId": 1,
+      "id": 3
     }
   ],
   "articles": [

@@ -93,6 +93,19 @@ button:hover {
   color: var(--button-text);
 }
 
+.icons__container {
+  text-align: right;
+}
+
+.icons__container > i {
+  font-size: 0.8rem;
+  color: gray;
+  margin-left: 0.2rem;
+}
+.icons__container > i:hover {
+  color: red;
+}
+
 /* AUTH - Login-Register */
 .auth > section {
   margin: auto;

@@ -48,7 +48,7 @@
 /* NEW STYLING */
 .message--card__container {
   padding: 0.5rem;
-  margin: 0.5rem;
+  margin: 0 0.5rem 0.5rem 0.5rem;
   padding: 1px;
   display: flex;
   flex-direction: column;
@@ -60,23 +60,11 @@
   padding: 0.5rem;
   max-width: 80%;
 }
-.message--icons__container {
-  text-align: right;
-}
-
-.message--icons__container > i {
-  font-size: 0.8rem;
-  color: gray;
-  margin-left: 0.2rem;
-}
-.message--icons__container > i:hover {
-  color: red;
-}
 
 .message--sender {
   font-size: 0.8rem;
-  margin-bottom: 0.5rem;
-  text-decoration: underline;
+  margin-bottom: 0.2rem;
+  margin-left: 0.2rem;
   opacity: 0.5;
 }
 
