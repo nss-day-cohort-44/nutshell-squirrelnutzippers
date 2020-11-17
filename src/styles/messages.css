@@ -10,15 +10,17 @@
   height: 300px;
 }
 
-.message {
-  border-radius: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-}
-
 .activeUser {
-  text-align: right;
-  flex-direction: row-reverse;
+  border-radius: 0.5rem 0.5rem 0 0.5rem;
+  align-self: flex-end;
+  background-color: rgb(37, 182, 37);
+  color: white;
+}
+.otherUser {
+  border-radius: 0.5rem 0.5rem 0.5rem 0;
+  align-self: flex-start;
+  background-color: rgb(21, 141, 240);
+  color: white;
 }
 
 .sender {
@@ -28,18 +30,43 @@
   border-radius: 0.5rem;
   padding: 0.2rem 0.5rem;
 }
-button.sender {
-  background-color: gold;
-}
-button.sender:hover {
-  background-color: orange;
+
+/* NEW STYLING */
+.message--card__container {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
 }
 
-.activeUser > div.sender {
-  background-color: var(--active-user-bkg);
+.message--card {
+  padding: 0.5rem;
+  border: 1px solid lightgray;
+  padding: 0.5rem;
+  max-width: 80%;
+}
+.message--icons__container {
+  text-align: right;
+}
+
+.message--icons__container > i {
+  font-size: 0.8rem;
+  color: gray;
+  margin-left: 0.2rem;
+}
+.message--icons__container > i:hover {
+  color: red;
+}
+
+.message--sender {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+  opacity: 0.5;
 }
 
 .private {
-  background-color: teal;
+  background-color: gray;
   color: white;
 }
