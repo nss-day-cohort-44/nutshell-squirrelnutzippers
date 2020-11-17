@@ -10,6 +10,7 @@
   --button-edit: orange;
   --button-text: white;
   --active-user-bkg: green;
+  --chat--bkg: rgba(0, 0, 0, 0.1);
 }
 
 html,
@@ -26,13 +27,14 @@ body {
 [data-theme="dark"] {
   --primary-color: rgb(31, 32, 39);
   --primary-text: rgb(240, 240, 240);
+  --chat-bkg: rgba(255, 255, 255, 0.1);
 }
 
 .card {
   border: 1px solid lightgray;
   padding: 0.5rem;
   margin: 0.5rem;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .form {

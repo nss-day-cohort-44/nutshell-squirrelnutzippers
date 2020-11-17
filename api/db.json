@@ -208,10 +208,11 @@
       "id": 15
     },
     {
-      "userId": 1,
-      "text": "HELLO EVERYONE!!",
-      "timestamp": 1605558346517,
-      "id": 16
+      "userId": 2,
+      "text": "@bryan how does this look??",
+      "timestamp": 1605622512197,
+      "messageUserId": 1,
+      "id": 17
     }
   ]
 }

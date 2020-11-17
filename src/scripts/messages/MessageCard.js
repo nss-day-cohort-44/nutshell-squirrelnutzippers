@@ -40,6 +40,7 @@ export const MessageCard = (messageObj) => {
       ) {
         isPrivate = false;
         messageClass = "private";
+        // console.log(messageObj.text.split(/[@ ]/).slice(2).join(" "));
       } else {
         isPrivate = true;
       }
@@ -52,24 +53,32 @@ export const MessageCard = (messageObj) => {
     return;
   } else if (isActiveUserMessage()) {
     return `
-    <div class="message card activeUser ${messageClass}">
-    <div class="sender">${senderDisplay}</div>
-    <div>${messageObj.text}</div>
-    <button id="message-delete--${messageObj.id}" class="button--delete">x</button>
+    <div class="message--card__container">
+      <div class="message--card activeUser ${messageClass}">
+        <div>${messageObj.text}</div>
+        </div>
+      <div class="message--icons__container">
+        <i id="message-delete--${messageObj.id}" class="far fa-trash-alt"></i>
+        <i id="message-edit--${messageObj.id}"class="far fa-edit"></i>
+      </div>
     </div>
     `;
   } else if (isFriendMessage()) {
     return `
-    <div class="message card ${messageClass}">
-    <div class="sender">${senderDisplay}</div>
-    <div>${messageObj.text}</div>
+    <div class="message--card__container">
+      <div class="message--sender">${senderDisplay}</div>
+      <div class="message--card otherUser ${messageClass}">
+      <div>${messageObj.text}</div>
+      </div>
     </div>
     `;
   } else {
     return `
-    <div class="message card ${messageClass}">
-    <button id="message-userId--${messageObj.userId}" class="sender">${senderDisplay}</button>
-    <div>${messageObj.text}</div>
+    <div class="message--card__container">
+      <div id="message-userId--${messageObj.userId}" class="message--sender">${senderDisplay}</div>
+      <div class="message--card otherUser">
+      <div>${messageObj.text}</div>
+      </div>
     </div>
     `;
   }
