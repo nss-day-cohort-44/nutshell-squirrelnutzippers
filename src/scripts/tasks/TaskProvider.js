@@ -34,6 +34,17 @@ export const updateTask = (taskObj) => {
     body: JSON.stringify(taskObj),
   }).then(dispatchStateChangeEvent);
 };
+export const completeTask = (taskId) => {
+  const completedTask = { iscomplete: true };
+
+  return fetch(`http://localhost:8088/tasks/${taskId}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(completedTask),
+  }).then(dispatchStateChangeEvent);
+};
 
 export const deleteTask = (id) => {
   return fetch(`http://localhost:8088/tasks/${id}`, {
