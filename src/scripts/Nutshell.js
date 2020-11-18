@@ -1,5 +1,6 @@
 import { ArticleList } from "./articles/ArticleList.js";
 import { EventList } from "./events/EventList.js";
+import { FriendList } from "./friends/FriendList.js";
 import { MessageList } from "./messages/MessageList.js";
 import { Nav } from "./navigation/Nav.js";
 import { TaskList } from "./tasks/TaskList.js";
@@ -10,6 +11,7 @@ export const Nutshell = () => {
   getUsers().then(() => {
     Nav();
     TaskList();
+    FriendList();
     EventList();
     ArticleList();
     MessageList();

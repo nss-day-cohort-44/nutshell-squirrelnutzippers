@@ -4,3 +4,5 @@ dist/
 .DS_Store
 database.json
 .vscode
+
+Settings.js

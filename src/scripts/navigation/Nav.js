@@ -42,9 +42,13 @@ const clearContainers = () => {
   const messagesContainer = document.querySelector("#messages");
   const articlesContainer = document.querySelector("#articles");
   const eventsContainer = document.querySelector("#events");
+  const tasksContainer = document.querySelector("#tasks");
+  const friendsContainer = document.querySelector("#friends");
 
   navContainer.innerHTML = "";
   messagesContainer.innerHTML = "";
   articlesContainer.innerHTML = "";
   eventsContainer.innerHTML = "";
+  tasksContainer.innerHTML = "";
+  friendsContainer.innerHTML = "";
 };

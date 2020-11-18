@@ -1,4 +1,4 @@
-import { deleteTask } from "./TaskProvider.js";
+import { deleteTask, completeTask } from "./TaskProvider.js";
 
 export const TaskCard = (taskObj) => {
   const options = {
@@ -39,5 +39,9 @@ eventHub.addEventListener("click", (event) => {
       },
     });
     eventHub.dispatchEvent(taskEditEvent);
+  }
+  if (event.target.id.startsWith("complete-task--")) {
+    const [prefix, taskId] = event.target.id.split("--");
+    completeTask(taskId);
   }
 });

@@ -9,8 +9,12 @@ const dispatchStateChangeEvent = () => {
   eventHub.dispatchEvent(friendsStateChanged);
 };
 
+export const useFriends = () => {
+  return friends.slice();
+};
+
 export const getFriends = () => {
-  return fetch("http://localhost:8088/friends")
+  return fetch("http://localhost:8088/friends?_expand=user")
     .then((response) => response.json())
     .then((friendsData) => {
       friends = friendsData;
@@ -25,6 +29,16 @@ export const saveFriend = (friendObj) => {
     },
     body: JSON.stringify(friendObj),
   })
+    .then(getFriends)
+    .then(getActiveUser)
+    .then(dispatchStateChangeEvent);
+};
+
+export const deleteFriend = (friendshipId) => {
+  return fetch(`http://localhost:8088/friends/${friendshipId}`, {
+    method: "DELETE",
+  })
+    .then(getFriends)
     .then(getActiveUser)
     .then(dispatchStateChangeEvent);
 };

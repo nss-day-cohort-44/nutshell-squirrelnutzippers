@@ -56,3 +56,4 @@ eventHub.addEventListener("click", (event) => {
 });
 
 eventHub.addEventListener("eventsStateChanged", EventList);
+eventHub.addEventListener("friendsStateChanged", EventList);
