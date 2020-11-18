@@ -61,6 +61,7 @@ body {
 
 .dashboard > div {
   margin: 0 1rem;
+  flex-basis: 25%;
 }
 
 .button--delete {
