@@ -15,9 +15,13 @@ const render = () => {
   contentTarget.innerHTML += `
     <nav class="nav__container">
       <div class="nav--logo">NUTSHELL</div>
-      <div class="nav--toggle">${ThemeToggle()}</div>
-      <div><i class="far fa-user"></i> ${userName}
-      <button id="logout">logout</button></div>
+      <div class="nav--switches">
+        <div class="nav--toggle">${ThemeToggle()}</div>
+        <div>
+          <i class="far fa-user"></i> ${userName}
+          <button id="logout">logout</button>
+        </div>
+      </div>
     </nav>
     `;
 };

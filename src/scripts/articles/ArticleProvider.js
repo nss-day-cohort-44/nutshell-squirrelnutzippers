@@ -5,7 +5,6 @@ let articles = [];
 const dispatchStateChangeEvent = () => {
   const articleStateChanged = new CustomEvent("articleStateChanged");
   eventHub.dispatchEvent(articleStateChanged);
-  //   window.localStorage.setItem("articleUpdated", true);
 };
 
 export const getArticles = () => {

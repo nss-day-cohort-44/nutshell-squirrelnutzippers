@@ -1,6 +1,7 @@
 import { EventCard } from "./EventCard.js";
 import { getEvents, useEvents } from "./EventProvider.js";
 import { useActiveUser } from "../users/UserProvider.js";
+import "./EventForm.js";
 
 let eventsArray = [];
 
@@ -45,3 +46,13 @@ const render = () => {
         ${eventsAsHTML}
     </div>`;
 };
+
+const eventHub = document.querySelector(".container");
+eventHub.addEventListener("click", (event) => {
+  if (event.target.id === "event--add-edit") {
+    const eventAddEvent = new CustomEvent("eventAddClicked");
+    eventHub.dispatchEvent(eventAddEvent);
+  }
+});
+
+eventHub.addEventListener("eventsStateChanged", EventList);

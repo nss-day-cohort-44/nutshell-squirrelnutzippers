@@ -33,6 +33,27 @@
       "date": "2020-11-19",
       "location": "Bahamas",
       "userId": 1
+    },
+    {
+      "name": "Bryan's New and Final Event",
+      "date": "2020-11-19",
+      "location": "NSS",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "New Bryan EVENT",
+      "date": "2020-11-20",
+      "location": "Home",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "Madi's Awesome BeatSaber Party",
+      "date": "2020-12-05",
+      "location": "Madi's House",
+      "userId": 2,
+      "id": 4
     }
   ],
   "articles": [
@@ -117,7 +138,29 @@
       "id": 6
     }
   ],
-  "tasks": [],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": 1,
+      "description": "take out trash",
+      "isComplete": false,
+      "completeByDate": "2020-11-19"
+    },
+    {
+      "id": 1,
+      "userId": 2,
+      "description": "play beatsaber",
+      "isComplete": false,
+      "completeByDate": "2020-11-19"
+    },
+    {
+      "description": "Clean garage and organize tools",
+      "completeByDate": "2020-11-21",
+      "isComplete": false,
+      "userId": 1,
+      "id": 2
+    }
+  ],
   "messages": [
     {
       "userId": 2,
@@ -187,25 +230,11 @@
       "id": 12
     },
     {
-      "userId": 2,
-      "text": "@tester can you see this?",
-      "timestamp": 1605557609309,
-      "messageUserId": 5,
-      "id": 13
-    },
-    {
       "userId": 1,
       "text": "@jisie I hope madi doesn't see this",
       "timestamp": 1605558308804,
       "messageUserId": 4,
       "id": 14
-    },
-    {
-      "userId": 1,
-      "text": "@scott I hope Jisie and Madi don't see this",
-      "timestamp": 1605558339885,
-      "messageUserId": 3,
-      "id": 15
     },
     {
       "userId": 2,
