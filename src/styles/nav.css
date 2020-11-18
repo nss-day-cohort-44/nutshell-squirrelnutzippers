@@ -7,8 +7,14 @@
 }
 
 .nav--logo {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 700;
+}
+
+.nav--switches {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* TOGGLE - Simple css to style it like a toggle switch*/
@@ -28,9 +34,9 @@
 
 .theme-switch {
   display: inline-block;
-  height: 22px;
+  height: 18px;
   position: relative;
-  width: 48px;
+  width: 40px;
 }
 
 .theme-switch input {
@@ -52,19 +58,20 @@
   background-color: #fff;
   bottom: 4px;
   content: "";
-  height: 14px;
+  height: 10px;
   left: 4px;
   position: absolute;
   transition: 0.4s;
-  width: 14px;
+  width: 10px;
 }
 
 input:checked + .slider {
-  background-color: #66bb6a;
+  background-color: #d86800;
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(22px);
+  background-color: rgb(0, 0, 0);
 }
 
 .slider.round {

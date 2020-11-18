@@ -58,7 +58,7 @@ export const MessageCard = (messageObj) => {
         </div>
       <div class="icons__container">
         <i id="message-delete--${messageObj.id}" class="far fa-trash-alt"></i>
-        <i id="message-edit--${messageObj.id}"class="far fa-edit"></i>
+        <i id="message-edit--${messageObj.id}" class="far fa-edit"></i>
       </div>
     </div>
     `;

@@ -54,7 +54,7 @@ eventHub.addEventListener("click", (event) => {
     const hiddenId = document.querySelector("#article--id");
 
     if (titleInput === "" || synopsisInput === "" || urlInput === "") {
-      alert("Please Fill out all Fields in the News Form");
+      alert("Please Fill out all Fields in the Article Form");
     } else {
       const user = useActiveUser();
 

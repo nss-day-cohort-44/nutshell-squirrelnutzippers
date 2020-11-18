@@ -1,6 +1,7 @@
 @import "./nav.css";
 @import "./messages.css";
 @import "./articles.css";
+@import "./tasks.css";
 
 /* LIGHT THEME DEFAULT */
 :root {
@@ -10,7 +11,7 @@
   --button-edit: orange;
   --button-text: white;
   --active-user-bkg: green;
-  --chat--bkg: rgba(0, 0, 0, 0.1);
+  --chat-bkg: rgba(255, 255, 255, 0.5);
 }
 
 html,
@@ -27,7 +28,7 @@ body {
 [data-theme="dark"] {
   --primary-color: rgb(31, 32, 39);
   --primary-text: rgb(240, 240, 240);
-  --chat-bkg: rgba(255, 255, 255, 0.1);
+  --chat-bkg: rgba(0, 0, 0, 0.5);
 }
 
 .card {
@@ -56,6 +57,10 @@ body {
 .dashboard {
   display: flex;
   justify-content: space-around;
+}
+
+.dashboard > div {
+  margin: 0 1rem;
 }
 
 .button--delete {

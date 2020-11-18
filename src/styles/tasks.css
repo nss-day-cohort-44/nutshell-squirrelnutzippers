@@ -1,0 +1,7 @@
+.task--card {
+  display: grid;
+  padding: 0.5rem;
+  border: 1px solid lightgray;
+  margin: 0.5rem;
+  grid-template-columns: 1fr 3fr 7fr 2fr;
+}
