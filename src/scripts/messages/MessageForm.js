@@ -1,12 +1,25 @@
 import { useActiveUser, useUsers } from "../users/UserProvider.js";
-import { saveMessage } from "./MessageProvider.js";
+import { getMessages, saveMessage, useMessages } from "./MessageProvider.js";
 
 const eventHub = document.querySelector(".container");
 
-export const MessageForm = () => {
-  return `
+export const MessageForm = (messageId) => {
+  const messageFormContainer = document.querySelector(
+    "#message-form__container"
+  );
+
+  let messageToUpdate = {};
+
+  if (messageId !== undefined) {
+    console.log("messageId: ", messageId);
+    messageToUpdate = useMessages().find((message) => message.id === messageId);
+  }
+  messageFormContainer.innerHTML = `
   <div class="form">
-    <input id="message--input" type="text" placeholder="type your message here..."/>
+  ${messageId ? `<input type="hidden" value="${messageToUpdate.id}" />` : ""}
+    <input id="message--input" type="text" placeholder="type your message here..." ${
+      messageToUpdate.text ? `value="${messageToUpdate.text}"` : ""
+    }"/>
     </div>
     `;
 };
@@ -35,7 +48,6 @@ eventHub.addEventListener("keydown", (event) => {
       );
       console.log("messagedUser: ", messagedUser);
       if (messagedUser) {
-        console.log("IN THE CONDITION!!!");
         newMessage.messageUserId = messagedUser.id;
       }
     }
@@ -43,4 +55,10 @@ eventHub.addEventListener("keydown", (event) => {
     // save message
     saveMessage(newMessage);
   }
+});
+
+eventHub.addEventListener("messageEditClicked", (event) => {
+  console.log(event);
+  const messageId = event.detail.messageId;
+  MessageForm(messageId);
 });
