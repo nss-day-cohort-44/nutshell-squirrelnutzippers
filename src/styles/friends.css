@@ -5,3 +5,7 @@
   margin: 0.5rem;
   justify-content: space-between;
 }
+
+.isFriend {
+  background-color: var(--isFriend-bkg);
+}

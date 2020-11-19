@@ -2,6 +2,7 @@
 @import "./messages.css";
 @import "./articles.css";
 @import "./tasks.css";
+@import "./events.css";
 @import "./friends.css";
 
 /* LIGHT THEME DEFAULT */
@@ -12,7 +13,9 @@
   --button-edit: orange;
   --button-text: white;
   --active-user-bkg: green;
-  --chat-bkg: rgba(255, 255, 255, 0.5);
+  --chat-bkg: rgb(255, 255, 255);
+  --prominent-bkg: rgb(128, 225, 255);
+  --isFriend-bkg: cornsilk;
 }
 
 html,
@@ -29,7 +32,9 @@ body {
 [data-theme="dark"] {
   --primary-color: rgb(31, 32, 39);
   --primary-text: rgb(240, 240, 240);
-  --chat-bkg: rgba(0, 0, 0, 0.5);
+  --chat-bkg: rgb(24, 24, 24);
+  --prominent-bkg: rgb(116, 0, 184);
+  --isFriend-bkg: rgb(97, 81, 16);
 }
 
 .card {

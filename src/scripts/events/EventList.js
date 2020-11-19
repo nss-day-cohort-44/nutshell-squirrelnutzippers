@@ -33,7 +33,10 @@ const render = () => {
   if (eventsArray.length === 0) {
     eventsAsHTML = "No events saved";
   } else {
-    eventsAsHTML = eventsArray.map((event) => EventCard(event)).join("");
+    eventsAsHTML = eventsArray
+      .sort((a, b) => a.date.localeCompare(b.date))
+      .map((event) => EventCard(event))
+      .join("");
   }
   // RENDER EVENTSHTML TO DOM
   contentTarget.innerHTML = `

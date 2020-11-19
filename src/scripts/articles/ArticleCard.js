@@ -5,6 +5,16 @@ export const ArticleCard = (articleObj) => {
   const date = new Date(articleObj.timestamp).toDateString();
   const activeUser = useActiveUser();
 
+  // EXTRACT THIS FUNCTIONALITY TO HELPER METHOD
+  const eventCreator = useUsers().find((user) => user.id === eventObj.userId);
+
+  const isFriend = activeUser.friends.find(
+    (friend) => friend.id === eventCreator.id
+  );
+  if (isFriend) {
+    console.log("isFriend: ", isFriend);
+  }
+
   const articleAsHTML = `
   <div class="article card">
     <div>${articleObj.title}</div>

@@ -6,8 +6,15 @@ export const EventCard = (eventObj) => {
   const activeUser = useActiveUser();
   const eventCreator = useUsers().find((user) => user.id === eventObj.userId);
 
+  const isFriend = activeUser.friends.find(
+    (friend) => friend.id === eventCreator.id
+  );
+  if (isFriend) {
+    console.log("isFriend: ", isFriend);
+  }
+
   const eventAsHTML = `
-    <div class="event card">
+    <div class="event card ${isFriend ? "isFriend" : ""}">
         <div>${eventObj.name}</div>
         <div>${date} - <button>show weather</button></div>
         <div>${eventObj.location}</div>

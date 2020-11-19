@@ -54,6 +54,20 @@
       "location": "Madi's House",
       "userId": 2,
       "id": 4
+    },
+    {
+      "name": "Tester's Party",
+      "date": "2020-11-13",
+      "location": "37011",
+      "userId": 3,
+      "id": 5
+    },
+    {
+      "name": "Scott's Birthday",
+      "date": "2020-12-12",
+      "location": "home",
+      "userId": 3,
+      "id": 6
     }
   ],
   "articles": [
@@ -134,13 +148,13 @@
     },
     {
       "activeUserId": 5,
-      "userId": 1,
-      "id": 8
-    },
-    {
-      "activeUserId": 5,
       "userId": 3,
       "id": 9
+    },
+    {
+      "activeUserId": 3,
+      "userId": 5,
+      "id": 10
     }
   ],
   "tasks": [
@@ -178,6 +192,13 @@
       "isComplete": false,
       "userId": 5,
       "id": 4
+    },
+    {
+      "id": 5,
+      "description": "Get friend search working, please",
+      "completeByDate": "2020-11-20",
+      "isComplete": false,
+      "userId": 3
     }
   ],
   "messages": [
@@ -264,7 +285,7 @@
     },
     {
       "userId": 5,
-      "text": "I am Tester!!",
+      "text": "I love this chat!",
       "timestamp": 1605737966847,
       "id": 18
     },
@@ -279,6 +300,20 @@
       "userId": 5,
       "timestamp": 1605752903616,
       "id": 20
+    },
+    {
+      "text": "@scott how's it going?",
+      "messageUserId": 3,
+      "userId": 5,
+      "timestamp": 1605753754198,
+      "id": 21
+    },
+    {
+      "text": "@tester it's great",
+      "messageUserId": 5,
+      "userId": 3,
+      "timestamp": 1605753817849,
+      "id": 22
     }
   ]
 }
