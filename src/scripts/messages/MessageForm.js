@@ -1,3 +1,15 @@
+/*
+  Author: Bryan Nilsen
+  Responsibility: This module handles the rendering and processing of a message 
+  form text input element.
+  
+  Parameters: messageId
+  If a messageId is passed to the MessageForm component, it will act as an update
+  to an existing message object. Otherwise, it will handle the creation of a new
+  message object.
+    
+*/
+
 import { useActiveUser, useUsers } from "../users/UserProvider.js";
 import { updateMessage, saveMessage, useMessages } from "./MessageProvider.js";
 
@@ -11,7 +23,6 @@ export const MessageForm = (messageId) => {
   let messageToUpdate = {};
 
   if (messageId !== undefined) {
-    console.log("messageId: ", messageId);
     messageToUpdate = useMessages().find((message) => message.id === messageId);
   }
   messageFormContainer.innerHTML = `
@@ -60,7 +71,7 @@ eventHub.addEventListener("keydown", (event) => {
       return;
     } else {
       const user = useActiveUser();
-      // add message properties
+      // add additional required message properties
       newOrEditedMessage.userId = user.id;
       newOrEditedMessage.timestamp = Date.now();
 
@@ -70,8 +81,8 @@ eventHub.addEventListener("keydown", (event) => {
   }
 });
 
+// HANDLER FOR WHEN MESSAGE EDIT IS CLICKED
 eventHub.addEventListener("messageEditClicked", (event) => {
-  console.log(event);
   const messageId = event.detail.messageId;
   MessageForm(messageId);
 });
