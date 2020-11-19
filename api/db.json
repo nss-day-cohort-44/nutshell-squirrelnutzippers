@@ -270,9 +270,15 @@
     },
     {
       "userId": 5,
-      "text": "TESTING",
+      "text": "I didn't write what I wrote",
       "timestamp": 1605738532368,
       "id": 19
+    },
+    {
+      "text": "Hey, this works!!",
+      "userId": 5,
+      "timestamp": 1605752903616,
+      "id": 20
     }
   ]
 }
