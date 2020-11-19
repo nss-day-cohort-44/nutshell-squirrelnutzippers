@@ -88,6 +88,16 @@ eventHub.addEventListener("click", (event) => {
     const [prefix, messageId] = event.target.id.split("--");
     deleteMessage(parseInt(messageId));
   }
+  if (event.target.id.startsWith("message-edit")) {
+    const [prefix, messageId] = event.target.id.split("--");
+    // send custom event with message id
+    const editMessageEvent = new CustomEvent("messageEditClicked", {
+      detail: {
+        messageId: parseInt(messageId),
+      },
+    });
+    eventHub.dispatchEvent(editMessageEvent);
+  }
   if (event.target.id.startsWith("message-userId")) {
     const [prefix, userId] = event.target.id.split("--");
     const confirmFriend = confirm(

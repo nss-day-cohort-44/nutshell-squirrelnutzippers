@@ -1,5 +1,6 @@
 import { useActiveUser } from "../users/UserProvider.js";
 import { FriendCard } from "./FriendCard.js";
+import { FriendSearch } from "./FriendSearch.js";
 import { getFriends, useFriends } from "./FriendsProvider.js";
 
 let userFriendships = [];
@@ -30,6 +31,7 @@ const render = () => {
 
   contentTarget.innerHTML =
     "<h1>Friends</h1>" +
+    FriendSearch() +
     "<div class='friend--list'>" +
     friendsAsHTML +
     "</div>";

@@ -22,12 +22,14 @@ const render = () => {
     .reverse()
     .join("");
 
-  contentTarget.innerHTML =
-    "<h1>Chat</h1>" +
-    "<div class='message--list'>" +
-    messagesAsHTML +
-    "</div>" +
-    MessageForm();
+  contentTarget.innerHTML = `<h1>Chat</h1>
+    <div class='message--list'>
+    ${messagesAsHTML}
+    </div>
+    <div id="message-form__container">
+    </div>`;
+
+  MessageForm();
 };
 
 // Reload messages after message add, delete, update
