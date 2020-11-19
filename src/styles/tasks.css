@@ -5,3 +5,8 @@
   margin: 0.5rem;
   grid-template-columns: 1fr 3fr 7fr 2fr;
 }
+
+.task--date {
+  padding-right: 0.2rem;
+  font-size: 0.8rem;
+}

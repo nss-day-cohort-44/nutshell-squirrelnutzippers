@@ -68,6 +68,34 @@
       "location": "home",
       "userId": 3,
       "id": 6
+    },
+    {
+      "name": "Yesterday",
+      "date": "2020-11-18",
+      "location": "gone",
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "name": "TODAY",
+      "date": "2020-11-19",
+      "location": "today",
+      "userId": 3,
+      "id": 8
+    },
+    {
+      "name": "Tomorrow",
+      "date": "2020-11-20",
+      "location": "where",
+      "userId": 3,
+      "id": 9
+    },
+    {
+      "id": 10,
+      "name": "Next Weekend",
+      "date": "2020-11-26",
+      "location": "home",
+      "userId": 3
     }
   ],
   "articles": [
@@ -314,6 +342,24 @@
       "userId": 3,
       "timestamp": 1605753817849,
       "id": 22
+    },
+    {
+      "text": "testing session",
+      "userId": 3,
+      "timestamp": 1605799950288,
+      "id": 23
+    },
+    {
+      "text": "local",
+      "userId": 3,
+      "timestamp": 1605800091605,
+      "id": 24
+    },
+    {
+      "text": "local",
+      "userId": 5,
+      "timestamp": 1605800094828,
+      "id": 25
     }
   ]
 }

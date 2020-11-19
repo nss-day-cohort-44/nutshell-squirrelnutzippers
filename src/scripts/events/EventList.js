@@ -25,6 +25,11 @@ export const EventList = () => {
 };
 
 const render = () => {
+  const today = new Date().toLocaleString("en-CA", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
   // location on DOM to Render ?? SHOULD THIS BE DECIDED BY COMPONENT or PARENT???
   const contentTarget = document.querySelector("#events");
   let eventsAsHTML = "";
@@ -34,6 +39,13 @@ const render = () => {
     eventsAsHTML = "No events saved";
   } else {
     eventsAsHTML = eventsArray
+      .filter((event) => {
+        // console.log("event date", event.date);
+        // console.log("Today: ", today);
+        if (event.date.localeCompare(today) >= 0) {
+          return event;
+        }
+      })
       .sort((a, b) => a.date.localeCompare(b.date))
       .map((event) => EventCard(event))
       .join("");

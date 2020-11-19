@@ -69,6 +69,7 @@
 }
 
 .private {
-  background-color: gray;
+  background-color: rgb(255, 0, 0);
   color: white;
+  /* opacity: 0.5; */
 }
