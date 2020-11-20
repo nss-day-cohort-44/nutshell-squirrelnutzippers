@@ -30,7 +30,7 @@ export const MessageCard = (messageObj) => {
   let messageClass = "";
 
   // is this a private message? - if so, is it private to or from the current user?
-  // TODO: NEED LOGIC IN HERE TO PREVENT SOMEONE FROM DM'ing a non-friend
+  // TODO: NEED LOGIC IN HERE TO PREVENT SOMEONE FROM DM'ing a non-friend ??
   const isPrivateMessage = () => {
     let isPrivate = false;
     if (messageObj.hasOwnProperty("messageUserId")) {
@@ -48,6 +48,7 @@ export const MessageCard = (messageObj) => {
     return isPrivate;
   };
 
+  // ! REFACTOR THIS SO IT'S DRY - conditional rendering
   if (isPrivateMessage()) {
     return;
   } else if (isActiveUserMessage()) {
