@@ -1,4 +1,5 @@
 import { useActiveUser, useUsers } from "../users/UserProvider.js";
+import { saveFriend } from "./FriendsProvider.js";
 
 const renderResults = (keyword) => {
   // Location to display results
@@ -27,10 +28,17 @@ const renderResults = (keyword) => {
   );
 
   const resultsHTML = searchFilter
-    .map((user) => `<div>${user.username}</div>`)
+    .map(
+      (user) =>
+        `<div class="search--result" id="search-userId--${user.id}">${user.username}</div>`
+    )
     .join("");
 
-  resultsContainer.innerHTML = resultsHTML;
+  resultsContainer.innerHTML = `
+  <div class="search--results__container">
+  ${resultsHTML}
+  </div>
+  `;
 };
 
 export const FriendSearch = () => {
@@ -57,5 +65,16 @@ eventHub.addEventListener("closeSearchClicked", (event) => {
 eventHub.addEventListener("keyup", (event) => {
   if (event.target.id === "friend--search") {
     renderResults(event.target.value);
+  }
+});
+eventHub.addEventListener("click", (event) => {
+  if (event.target.id.startsWith("search-userId")) {
+    const [prefix, userId] = event.target.id.split("--");
+    const activeUser = useActiveUser();
+    const newFriend = {
+      userId,
+      activeUserId: activeUser.id,
+    };
+    saveFriend(newFriend);
   }
 });
