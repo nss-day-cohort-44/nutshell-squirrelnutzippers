@@ -39,6 +39,7 @@ eventHub.addEventListener("click", (event) => {
 });
 
 const clearContainers = () => {
+  // ! THIS COULD BE DONE DYNAMICALLY WITH A CONSISTENT CLASS NAMING CONVENTION
   const navContainer = document.querySelector("#nav");
   const messagesContainer = document.querySelector("#messages");
   const articlesContainer = document.querySelector("#articles");

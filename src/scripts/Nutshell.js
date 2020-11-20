@@ -1,4 +1,5 @@
 import { ArticleList } from "./articles/ArticleList.js";
+import { setDragDrop } from "./dragdrop.js";
 import { EventList } from "./events/EventList.js";
 import { FriendList } from "./friends/FriendList.js";
 import { MessageList } from "./messages/MessageList.js";
@@ -17,5 +18,6 @@ export const Nutshell = () => {
     ArticleList();
     MessageList();
     WeatherCard();
+    setDragDrop();
   });
 };

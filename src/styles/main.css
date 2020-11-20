@@ -130,3 +130,7 @@ button:hover {
 .center {
   text-align: center;
 }
+
+.dropzone {
+  padding-bottom: 1em;
+}
