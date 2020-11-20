@@ -15,7 +15,7 @@
     {
       "email": "scott@scott.com",
       "username": "scott",
-      "zip": "77001",
+      "zip": "77701",
       "id": 3
     },
     {
@@ -253,6 +253,13 @@
       "completeByDate": "2020-11-20",
       "isComplete": false,
       "userId": 3
+    },
+    {
+      "description": "Make this column narrower",
+      "completeByDate": "2020-11-20",
+      "isComplete": false,
+      "userId": 9,
+      "id": 6
     }
   ],
   "messages": [
