@@ -33,13 +33,14 @@ eventHub.addEventListener("click", (event) => {
     sessionStorage.removeItem("activeUser");
     localStorage.removeItem("theme");
     document.documentElement.removeAttribute("data-theme");
+    // ! REPLACE next line with custom "logout" event
     clearContainers();
     eventHub.dispatchEvent(new CustomEvent("userAuthenticated"));
   }
 });
 
 const clearContainers = () => {
-  // ! THIS COULD BE DONE DYNAMICALLY WITH A CONSISTENT CLASS NAMING CONVENTION
+  // ! THIS COULD BE DONE DYNAMICALLY WITH A CONSISTENT CLASS NAMING CONVENTION OR ADDING EVENT LISTENERS TO INDIVIDUAL COMPONENTS TO LISTEN FOR LOGOUT
   const navContainer = document.querySelector("#nav");
   const messagesContainer = document.querySelector("#messages");
   const articlesContainer = document.querySelector("#articles");

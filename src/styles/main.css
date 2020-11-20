@@ -134,3 +134,7 @@ button:hover {
 .dropzone {
   padding-bottom: 1em;
 }
+
+.dragging {
+  border: 1px solid gray;
+}
