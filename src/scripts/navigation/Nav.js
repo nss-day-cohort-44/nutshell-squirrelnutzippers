@@ -1,5 +1,4 @@
 import { useActiveUser } from "../users/UserProvider.js";
-import { getWeather } from "../weather/WeatherProvider.js";
 import { ThemeToggle, ThemeToggleListeners } from "./ThemeToggle.js";
 
 const eventHub = document.querySelector(".container");
@@ -13,7 +12,6 @@ export const Nav = () => {
 const render = () => {
   const activeUser = useActiveUser();
 
-  getWeather(activeUser.zip);
   const userName = activeUser.email.split("@")[0];
   contentTarget.innerHTML += `
     <nav class="nav__container">

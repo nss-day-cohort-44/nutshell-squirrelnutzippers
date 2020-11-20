@@ -26,9 +26,6 @@ export const EventCard = (eventObj) => {
   if (today <= date && date <= endDayRange) {
     // console.log("DATE IN RANGE: ", date);
     dateInRange = true;
-  } else {
-    console.log("TODAY", today);
-    console.log("DATE", date);
   }
   const activeUser = useActiveUser();
   const eventCreator = useUsers().find((user) => user.id === eventObj.userId);
@@ -36,10 +33,6 @@ export const EventCard = (eventObj) => {
   const isFriend = activeUser.friends.find(
     (friend) => friend.id === eventCreator.id
   );
-
-  if (isFriend) {
-    console.log("isFriend: ", isFriend);
-  }
 
   const eventAsHTML = `
     <div class="event card ${isFriend ? "isFriend" : ""}">

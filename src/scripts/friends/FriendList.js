@@ -9,7 +9,6 @@ export const FriendList = () => {
   getFriends().then(() => {
     // get all friendships
     const allFriendships = useFriends();
-    console.log("allFriendships: ", allFriendships);
 
     // get active user
     const activeUser = useActiveUser();
@@ -18,7 +17,6 @@ export const FriendList = () => {
       (friendship) => friendship.activeUserId === activeUser.id
     );
 
-    console.log(userFriendships);
     render();
   });
 };
@@ -31,7 +29,7 @@ const render = () => {
 
   contentTarget.innerHTML = `
   <h1 class='section--header'>
-    Events
+    Friends
   <button id="friend--add">+ Add Friend</button>
   </h1>
   <div id="friendSearch__container"></div>

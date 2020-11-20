@@ -12,7 +12,6 @@ export const ArticleCard = (articleObj) => {
     (friend) => friend.id === eventCreator.id
   );
   if (isFriend) {
-    console.log("isFriend: ", isFriend);
   }
   // EXTRACT TO HERE ^^
 

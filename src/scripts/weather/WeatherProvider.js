@@ -1,11 +1,17 @@
 import keys from "../../Settings.js";
 
-export const getWeather = (city) => {
+let weather;
+
+export const getCurrentWeather = (zip) => {
   return fetch(
-    `https://api.openweathermap.org/data/2.5/onecall?q=${city}&units=imperial&appid=${keys.weatherKey}`
+    `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=${keys.weatherKey}`
   )
     .then((response) => response.json())
     .then((parsedWeather) => {
-      return parsedWeather.daily.slice(0, 5);
+      weather = parsedWeather;
     });
+};
+
+export const useWeather = () => {
+  return weather;
 };
