@@ -1,0 +1,13 @@
+.event--list > div:nth-child(1) {
+  font-weight: 600;
+  font-size: 1.15rem;
+  background-color: var(--prominent-bkg);
+}
+
+.event--date {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}

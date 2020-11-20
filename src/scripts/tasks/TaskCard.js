@@ -14,7 +14,7 @@ export const TaskCard = (taskObj) => {
   const taskAsHTML = `
     <div class="task--card">
         <div><input id="complete-task--${taskObj.id}" type="checkbox" value="${taskObj.isComplete}"></div>
-        <div>${date}</div>
+        <div class="task--date">${date}</div>
         <div>${taskObj.description}</div>
         <div class="icons__container">
             <i id="delete-task--${taskObj.id}" class="far fa-trash-alt"></i>

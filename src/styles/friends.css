@@ -5,3 +5,27 @@
   margin: 0.5rem;
   justify-content: space-between;
 }
+
+.isFriend {
+  background-color: var(--isFriend-bkg);
+  font-style: italic;
+}
+
+#search--results {
+  position: relative;
+  top: 2px;
+  background-color: var(--primary-color);
+  color: var(--primary--text);
+}
+
+.search--results__container {
+  border: 1px solid gray;
+}
+
+.search--result {
+  padding: 0.2rem 0.5rem;
+}
+
+.search--result:hover {
+  background-color: deepskyblue;
+}

@@ -1,9 +1,20 @@
 import { deleteArticle } from "./ArticleProvider.js";
-import { useActiveUser } from "../users/UserProvider.js";
+import { useActiveUser, useUsers } from "../users/UserProvider.js";
 
 export const ArticleCard = (articleObj) => {
   const date = new Date(articleObj.timestamp).toDateString();
   const activeUser = useActiveUser();
+
+  // EXTRACT THIS FUNCTIONALITY TO HELPER METHOD vv (also in event card)
+  const eventCreator = useUsers().find((user) => user.id === articleObj.userId);
+
+  const isFriend = activeUser.friends.find(
+    (friend) => friend.id === eventCreator.id
+  );
+  if (isFriend) {
+    console.log("isFriend: ", isFriend);
+  }
+  // EXTRACT TO HERE ^^
 
   const articleAsHTML = `
   <div class="article card">

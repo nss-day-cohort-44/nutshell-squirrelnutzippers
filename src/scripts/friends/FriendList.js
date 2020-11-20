@@ -29,15 +29,32 @@ const render = () => {
     .map((friend) => FriendCard(friend))
     .join("");
 
-  contentTarget.innerHTML =
-    "<h1>Friends</h1>" +
-    FriendSearch() +
-    "<div class='friend--list'>" +
-    friendsAsHTML +
-    "</div>";
+  contentTarget.innerHTML = `
+  <h1 class='section--header'>
+    Events
+  <button id="friend--add">+ Add Friend</button>
+  </h1>
+  <div id="friendSearch__container"></div>
+  <div class='friend--list'>
+    ${friendsAsHTML}
+  </div>`;
 };
 
 const eventHub = document.querySelector(".container");
 eventHub.addEventListener("friendsStateChanged", FriendList);
 
-// NEED TO BUILD A SEARCH COMPONENT TO ADD FRIEND
+eventHub.addEventListener("click", (event) => {
+  if (event.target.id === "friend--add") {
+    // CHECK IF CLOSE OR OPEN
+    const button = document.getElementById("friend--add");
+    if (event.target.innerHTML === "x Close") {
+      button.innerHTML = "+ Add Friend";
+      const closeSearchEvent = new CustomEvent("closeSearchClicked");
+      eventHub.dispatchEvent(closeSearchEvent);
+    } else {
+      button.innerHTML = "x Close";
+      const friendAddEvent = new CustomEvent("friendAddClicked");
+      eventHub.dispatchEvent(friendAddEvent);
+    }
+  }
+});
