@@ -45,6 +45,7 @@ const clearContainers = () => {
   const eventsContainer = document.querySelector("#events");
   const tasksContainer = document.querySelector("#tasks");
   const friendsContainer = document.querySelector("#friends");
+  const weatherContainer = document.querySelector("#weather");
 
   navContainer.innerHTML = "";
   messagesContainer.innerHTML = "";
@@ -52,4 +53,5 @@ const clearContainers = () => {
   eventsContainer.innerHTML = "";
   tasksContainer.innerHTML = "";
   friendsContainer.innerHTML = "";
+  weatherContainer.innerHTML = "";
 };
