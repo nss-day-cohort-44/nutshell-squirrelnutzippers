@@ -39,12 +39,14 @@ eventHub.addEventListener("click", (event) => {
 });
 
 const clearContainers = () => {
+  // ! THIS COULD BE DONE DYNAMICALLY WITH A CONSISTENT CLASS NAMING CONVENTION
   const navContainer = document.querySelector("#nav");
   const messagesContainer = document.querySelector("#messages");
   const articlesContainer = document.querySelector("#articles");
   const eventsContainer = document.querySelector("#events");
   const tasksContainer = document.querySelector("#tasks");
   const friendsContainer = document.querySelector("#friends");
+  const weatherContainer = document.querySelector("#weather");
 
   navContainer.innerHTML = "";
   messagesContainer.innerHTML = "";
@@ -52,4 +54,5 @@ const clearContainers = () => {
   eventsContainer.innerHTML = "";
   tasksContainer.innerHTML = "";
   friendsContainer.innerHTML = "";
+  weatherContainer.innerHTML = "";
 };
