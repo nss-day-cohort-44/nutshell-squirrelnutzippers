@@ -3,46 +3,55 @@
     {
       "email": "bryan@bryan.com",
       "username": "bryan",
+      "zip": "10007",
       "id": 1
     },
     {
       "email": "madi@madi.com",
       "username": "madi",
+      "zip": "92038",
       "id": 2
     },
     {
       "email": "scott@scott.com",
       "username": "scott",
+      "zip": "77001",
       "id": 3
     },
     {
       "email": "jisie@jisie.com",
       "username": "jisie",
+      "zip": "94016",
       "id": 4
     },
     {
       "username": "tester",
       "email": "tester@tester.com",
+      "zip": "37011",
       "id": 5
     },
     {
       "username": "joe",
       "email": "joe@joe.com",
+      "zip": "33101",
       "id": 6
     },
     {
       "username": "andy",
       "email": "andy@andy.com",
+      "zip": "99501",
       "id": 7
     },
     {
       "username": "brenda",
       "email": "brenda@brenda.com",
+      "zip": "96703",
       "id": 8
     },
     {
       "username": "adam",
       "email": "adam@adam.com",
+      "zip": "19019",
       "id": 9
     }
   ],
