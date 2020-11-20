@@ -29,7 +29,7 @@ export const MessageForm = (messageId) => {
   <div class="form">
   ${
     messageId
-      ? `<input id="message--edit" type="hidden" value="${messageToUpdate.id}" /><i class="far fa-paper-plane"></i>`
+      ? `<input id="message--edit" type="hidden" value="${messageToUpdate.id}" />`
       : ""
   }
     <input id="message--input" type="text" placeholder="type your message here..." ${

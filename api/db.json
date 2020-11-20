@@ -77,13 +77,6 @@
       "id": 7
     },
     {
-      "name": "TODAY",
-      "date": "2020-11-19",
-      "location": "today",
-      "userId": 3,
-      "id": 8
-    },
-    {
       "name": "Tomorrow",
       "date": "2020-11-20",
       "location": "where",
@@ -114,14 +107,6 @@
       "timestamp": 1605457156139,
       "userId": 4,
       "id": 2
-    },
-    {
-      "title": "Scott's Article",
-      "synopsis": "Here a sample...",
-      "url": "www.scott.com",
-      "timestamp": 1605459568144,
-      "userId": 3,
-      "id": 3
     },
     {
       "id": 4,
@@ -350,7 +335,7 @@
       "id": 23
     },
     {
-      "text": "local",
+      "text": "holy moly!",
       "userId": 3,
       "timestamp": 1605800091605,
       "id": 24
