@@ -33,6 +33,11 @@ function onDragStart(event) {
   event.dataTransfer.setData("text/plain", event.target.id);
   // adds style to element while being dragged
   event.currentTarget.classList.add("dragging");
+
+  const containerElements = document.querySelectorAll(".category__container");
+  for (const container of containerElements) {
+    container.classList.add("droppable");
+  }
 }
 
 function onDragOver(event) {
@@ -40,11 +45,19 @@ function onDragOver(event) {
 }
 
 function onDrop(event) {
-  console.log("DROP event: ", event);
   const id = event.dataTransfer.getData("text");
   const draggableElement = document.getElementById(id);
+
+  // remove style applied when dragging
   draggableElement.classList.remove("dragging");
-  const dropzone = event.target;
+
+  const containerElements = document.querySelectorAll(".category__container");
+  for (const container of containerElements) {
+    container.classList.remove("droppable");
+  }
+
+  // PREVENT DROPPING INTO NESTED ELEMENTS - FINDS PARENT DROPZONE ELEMENT
+  const dropzone = event.target.closest(".dropzone");
   dropzone.appendChild(draggableElement);
 
   event.dataTransfer.clearData();

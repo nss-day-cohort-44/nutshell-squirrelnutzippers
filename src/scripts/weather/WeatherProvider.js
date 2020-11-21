@@ -1,17 +1,50 @@
+/*
+  Author: Bryan Nilsen
+  Responsibility: This module handles the collection of geolocation and weather data from
+    the openweathermap and opendatasoft APIs.
+  
+  Parameters: zip code, latitude and longitude
+    
+*/
+
 import keys from "../../Settings.js";
 
-let weather;
+let weather = {};
+let eventWeather = {};
 
-export const getCurrentWeather = (zip) => {
+// GET LAT/LONG FROM USER/EVENT ZIP CODE
+const getGeolocationDataFromZip = (zip) => {
   return fetch(
-    `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=${keys.weatherKey}`
+    `https://public.opendatasoft.com/api/records/1.0/search/?dataset=us-zip-code-latitude-and-longitude&q=${zip}`
   )
     .then((response) => response.json())
-    .then((parsedWeather) => {
-      weather = parsedWeather;
+    .then((parsedData) => {
+      const geolocationData = parsedData.records[0].fields;
+      return geolocationData;
     });
 };
 
+// GET WEATHER FROM API USING LAT/LONG
+export const getWeather = (lat, lon) => {
+  return fetch(
+    `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=${keys.weatherKey}`
+  )
+    .then((response) => response.json())
+    .then((parsedWeather) => {
+      weather.forecast = parsedWeather;
+    });
+};
+
+// GET WEATHER FROM ZIP
+export const getWeatherFromZip = (zip) => {
+  return getGeolocationDataFromZip(zip).then((geoData) => {
+    weather.city = geoData.city;
+    weather.state = geoData.state;
+    const lat = geoData.geopoint[0];
+    const lon = geoData.geopoint[1];
+    return getWeather(lat, lon);
+  });
+};
 export const useWeather = () => {
   return weather;
 };

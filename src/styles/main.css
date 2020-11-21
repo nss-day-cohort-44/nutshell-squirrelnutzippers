@@ -67,8 +67,12 @@ body {
 }
 
 .dashboard > div {
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   flex-basis: 25%;
+}
+
+.category__container {
+  padding: 0.5rem;
 }
 
 .button--delete {
@@ -85,6 +89,7 @@ body {
 .section--header {
   display: flex;
   justify-content: space-between;
+  margin: 0;
 }
 
 /* GENERIC BUTTONS */
@@ -131,10 +136,15 @@ button:hover {
   text-align: center;
 }
 
+/* DRAG AND DROP */
 .dropzone {
   padding-bottom: 1em;
 }
 
 .dragging {
   border: 1px solid gray;
+}
+
+.droppable {
+  border: 1px solid lightgray;
 }

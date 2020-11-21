@@ -16,7 +16,7 @@ export const EventCard = (eventObj) => {
   };
 
   // STORE X-DAYS
-  const endDayRange = getXDaysFromToday(5);
+  const endDayRange = getXDaysFromToday(7);
 
   // CONVERT DATE FROM DB
   const date = new Date(eventObj.date.replace(/-/g, "/"));
@@ -27,6 +27,9 @@ export const EventCard = (eventObj) => {
     // console.log("DATE IN RANGE: ", date);
     dateInRange = true;
   }
+
+  const daysFromToday = (date - today) / 86400000;
+
   const activeUser = useActiveUser();
   const eventCreator = useUsers().find((user) => user.id === eventObj.userId);
 
@@ -40,7 +43,7 @@ export const EventCard = (eventObj) => {
         ${date.toLocaleDateString("en-US")}
         ${
           dateInRange
-            ? `<button>show weather <i class="fas fa-cloud-sun"></i></button>`
+            ? `<button id="event-weather--${eventObj.location}--${daysFromToday}">show weather <i class="fas fa-cloud-sun"></i></button>`
             : ""
         }
         </div>

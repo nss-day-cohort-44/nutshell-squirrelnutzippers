@@ -7,6 +7,7 @@ import { Nav } from "./navigation/Nav.js";
 import { TaskList } from "./tasks/TaskList.js";
 import { getUsers } from "./users/UserProvider.js";
 import { WeatherCard } from "./weather/WeatherCard.js";
+import { WeatherList } from "./weather/WeatherList.js";
 
 export const Nutshell = () => {
   // Render all your UI components here
@@ -17,6 +18,7 @@ export const Nutshell = () => {
     EventList();
     ArticleList();
     MessageList();
+    WeatherList();
     WeatherCard();
     setDragDrop();
   });

@@ -4,6 +4,7 @@
   background-color: var(--primary-color);
   color: var(--primary-text);
   padding: 1rem;
+  margin-bottom: 1em;
 }
 
 .nav--logo {

@@ -40,8 +40,6 @@ const render = () => {
   } else {
     eventsAsHTML = eventsArray
       .filter((event) => {
-        // console.log("event date", event.date);
-        // console.log("Today: ", today);
         if (event.date.localeCompare(today) >= 0) {
           return event;
         }

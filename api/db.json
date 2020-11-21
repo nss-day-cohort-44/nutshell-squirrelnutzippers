@@ -167,6 +167,14 @@
       "url": "madipeper.com",
       "timestamp": 1605490211882,
       "userId": 2
+    },
+    {
+      "title": "15 React Best Practices You Need to Follow in 2020",
+      "synopsis": "If you’re a frontend developer engaged in building highly interactive user interfaces, you’ve most likely got React in your toolkit. While working on your React-powered creations, you should be careful to do things in tune with the React best practices. This will help to keep your code better organized.",
+      "url": "https://www.codeinwp.com/blog/react-best-practices/",
+      "timestamp": 1605978351629,
+      "userId": 3,
+      "id": 7
     }
   ],
   "friends": [
@@ -199,11 +207,6 @@
       "activeUserId": 5,
       "userId": 3,
       "id": 9
-    },
-    {
-      "activeUserId": 3,
-      "userId": 5,
-      "id": 10
     },
     {
       "userId": "9",
@@ -265,6 +268,13 @@
       "isComplete": false,
       "userId": 9,
       "id": 6
+    },
+    {
+      "description": "Cut the grass, rake leaves",
+      "completeByDate": "2020-11-22",
+      "isComplete": false,
+      "userId": 3,
+      "id": 7
     }
   ],
   "messages": [
