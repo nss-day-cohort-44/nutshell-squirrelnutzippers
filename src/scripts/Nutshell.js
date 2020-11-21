@@ -6,7 +6,6 @@ import { MessageList } from "./messages/MessageList.js";
 import { Nav } from "./navigation/Nav.js";
 import { TaskList } from "./tasks/TaskList.js";
 import { getUsers } from "./users/UserProvider.js";
-import { WeatherCard } from "./weather/WeatherCard.js";
 import { WeatherList } from "./weather/WeatherList.js";
 
 export const Nutshell = () => {
@@ -19,7 +18,6 @@ export const Nutshell = () => {
     ArticleList();
     MessageList();
     WeatherList();
-    WeatherCard();
     setDragDrop();
   });
 };

@@ -1,5 +1,10 @@
+.forecast__container {
+  display: flex;
+}
+
 .weather--card {
   text-align: center;
+  border: 1px solid lightgray;
 }
 
 .weather--card img {

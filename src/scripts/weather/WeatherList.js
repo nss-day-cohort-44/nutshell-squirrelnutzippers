@@ -6,6 +6,7 @@
 */
 import { getWeatherFromZip, useWeather } from "../weather/WeatherProvider.js";
 import { useActiveUser } from "../users/UserProvider.js";
+import { WeatherCard } from "./WeatherCard.js";
 
 let weather;
 
@@ -19,4 +20,18 @@ export const WeatherList = () => {
 
 const render = () => {
   console.log("weather: ", weather);
+
+  const weatherContainer = document.getElementById("weather");
+  const weatherAsHTML = weather.forecast.daily
+    .slice(0, 5)
+    .map((day) => WeatherCard(day))
+    .join("");
+  weatherContainer.innerHTML = `
+  <h1 class='section--header'>
+    Weather</div>
+  </h1>
+  <div>Forecast for: ${weather.city}, ${weather.state}</div>
+  <div class="forecast__container">
+    ${weatherAsHTML}
+  </div>`;
 };
