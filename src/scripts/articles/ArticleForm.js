@@ -44,6 +44,11 @@ eventHub.addEventListener("articleEditClicked", (event) => {
   contentTarget.innerHTML = ArticleForm(articleId);
 });
 
+eventHub.addEventListener("closeArticleFormClicked", (event) => {
+  const contentTarget = document.querySelector("#articleForm__container");
+  contentTarget.innerHTML = "";
+});
+
 eventHub.addEventListener("click", (event) => {
   // Check article submit button was clicked
   if (event.target.id === "articleForm--submit") {

@@ -15,6 +15,7 @@
   --button-text: white;
   --active-user-bkg: green;
   --chat-bkg: rgb(255, 255, 255);
+  --card-bkg: rgb(255, 255, 255);
   --prominent-bkg: rgb(128, 225, 255);
   --isFriend-bkg: cornsilk;
 }
@@ -36,13 +37,17 @@ body {
   --chat-bkg: rgb(24, 24, 24);
   --prominent-bkg: rgb(116, 0, 184);
   --isFriend-bkg: rgb(97, 81, 16);
+  --card-bkg: rgb(24, 24, 24);
 }
 
 .card {
   border: 1px solid lightgray;
   padding: 0.5rem;
   margin: 0.5rem;
-  /* align-items: center; */
+}
+
+.card-bkg {
+  background-color: var(--card-bkg);
 }
 
 .form {

@@ -39,7 +39,7 @@ export const EventCard = (eventObj) => {
   );
 
   const eventAsHTML = `
-    <div class="event card ${isFriend ? "isFriend" : ""}">
+    <div class="event card ${isFriend ? "isFriend" : "card-bkg"}">
         <div class="event--date">
         ${date.toLocaleDateString("en-US")}
         ${
