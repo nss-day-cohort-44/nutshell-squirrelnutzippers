@@ -18,6 +18,7 @@ export const EventForm = (eventId) => {
       <input id="event--name" type="text" placeholder="name" value="${eventToEdit.name}"/>
       <input id="event--date" type="date" placeholder="date" value="${eventToEdit.date}"/>
       <input id="event--location" type="text" placeholder="location" value="${eventToEdit.location}"/>
+      <input id="event--zip" type="text" placeholder="zip code" value="${eventToEdit.zip}"/>
       <button id="eventForm--submit">submit</button>
     </div>
       `;
@@ -28,6 +29,7 @@ export const EventForm = (eventId) => {
       <input id="event--name" type="text" placeholder="name"/>
       <input id="event--date" type="date" placeholder="date"/>
       <input id="event--location" type="text" placeholder="location"/>
+      <input id="event--zip" type="text" placeholder="zip code"/>
       <button id="eventForm--submit">submit</button>
     </div>
       `;
@@ -51,6 +53,7 @@ eventHub.addEventListener("click", (event) => {
     const nameInput = document.querySelector("#event--name").value;
     const dateInput = document.querySelector("#event--date").value;
     const locationInput = document.querySelector("#event--location").value;
+    const zipInput = document.querySelector("#event--zip").value;
     const hiddenId = document.querySelector("#event--id");
 
     if (nameInput === "" || dateInput === "" || locationInput === "") {
@@ -65,6 +68,7 @@ eventHub.addEventListener("click", (event) => {
           name: nameInput,
           date: dateInput,
           location: locationInput,
+          zip: zipInput,
           userId: user.id,
         };
         updateEvent(editedEvent);
@@ -73,6 +77,7 @@ eventHub.addEventListener("click", (event) => {
           name: nameInput,
           date: dateInput,
           location: locationInput,
+          zip: zipInput,
           userId: user.id,
         };
         saveEvent(newEvent);

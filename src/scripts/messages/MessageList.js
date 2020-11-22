@@ -22,7 +22,7 @@ const render = () => {
     .reverse()
     .join("");
 
-  contentTarget.innerHTML = `<h1>Chat</h1>
+  contentTarget.innerHTML = `<h1 class='section--header'>Chat</h1>
     <div class='message--list'>
     ${messagesAsHTML}
     </div>

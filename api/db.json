@@ -53,27 +53,36 @@
       "email": "adam@adam.com",
       "zip": "19019",
       "id": 9
+    },
+    {
+      "username": "jackson",
+      "email": "jackson@jackson.com",
+      "zip": "11231",
+      "id": 10
     }
   ],
   "events": [
     {
       "id": 1,
       "name": "Thanksgiving",
-      "date": "2020-11-19",
-      "location": "Bahamas",
+      "date": "2020-11-26",
+      "location": "Poppy's House",
+      "zip": "11716",
       "userId": 1
     },
     {
       "name": "Bryan's New and Final Event",
       "date": "2020-11-19",
       "location": "NSS",
+      "zip": "37217",
       "userId": 1,
       "id": 2
     },
     {
-      "name": "New Bryan EVENT",
+      "name": "90's Reunion",
       "date": "2020-11-20",
-      "location": "Home",
+      "location": "Beverly Hills",
+      "zip": "90210",
       "userId": 1,
       "id": 3
     },
@@ -81,13 +90,15 @@
       "name": "Madi's Awesome BeatSaber Party",
       "date": "2020-12-05",
       "location": "Madi's House",
+      "zip": "78701",
       "userId": 2,
       "id": 4
     },
     {
       "name": "Tester's Party",
       "date": "2020-11-13",
-      "location": "37011",
+      "location": "145 Happy Lane",
+      "zip": "37011",
       "userId": 3,
       "id": 5
     },
@@ -95,6 +106,7 @@
       "name": "Scott's Birthday",
       "date": "2020-12-12",
       "location": "home",
+      "zip": "37217",
       "userId": 3,
       "id": 6
     },
@@ -102,6 +114,7 @@
       "name": "Yesterday",
       "date": "2020-11-18",
       "location": "gone",
+      "zip": "37217",
       "userId": 3,
       "id": 7
     },
@@ -109,22 +122,33 @@
       "name": "Tomorrow",
       "date": "2020-11-20",
       "location": "where",
+      "zip": "10001",
       "userId": 3,
       "id": 9
     },
     {
       "id": 10,
-      "name": "Next Weekend",
+      "name": "Ski Party",
       "date": "2020-11-26",
-      "location": "home",
+      "location": "Killington",
+      "zip": "05751",
       "userId": 3
     },
     {
       "name": "Adam's Sweater Party",
       "date": "2020-11-21",
-      "location": "58888",
+      "location": "Adam's House",
+      "zip": "58888",
       "userId": 9,
       "id": 11
+    },
+    {
+      "name": "C28 Meetup",
+      "date": "2020-11-22",
+      "location": "Yee Haw",
+      "zip": "37203",
+      "userId": 1,
+      "id": 12
     }
   ],
   "articles": [
@@ -167,6 +191,14 @@
       "url": "madipeper.com",
       "timestamp": 1605490211882,
       "userId": 2
+    },
+    {
+      "title": "15 React Best Practices You Need to Follow in 2020",
+      "synopsis": "If you’re a frontend developer engaged in building highly interactive user interfaces, you’ve most likely got React in your toolkit. While working on your React-powered creations, you should be careful to do things in tune with the React best practices. This will help to keep your code better organized.",
+      "url": "https://www.codeinwp.com/blog/react-best-practices/",
+      "timestamp": 1605978351629,
+      "userId": 3,
+      "id": 7
     }
   ],
   "friends": [
@@ -201,11 +233,6 @@
       "id": 9
     },
     {
-      "activeUserId": 3,
-      "userId": 5,
-      "id": 10
-    },
-    {
       "userId": "9",
       "activeUserId": 3,
       "id": 11
@@ -214,6 +241,16 @@
       "activeUserId": 9,
       "userId": 1,
       "id": 12
+    },
+    {
+      "userId": "1",
+      "activeUserId": 10,
+      "id": 13
+    },
+    {
+      "userId": "2",
+      "activeUserId": 10,
+      "id": 14
     }
   ],
   "tasks": [
@@ -265,6 +302,27 @@
       "isComplete": false,
       "userId": 9,
       "id": 6
+    },
+    {
+      "description": "Cut the grass, rake leaves",
+      "completeByDate": "2020-11-22",
+      "isComplete": false,
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "description": "make my bed",
+      "completeByDate": "2020-11-21",
+      "isComplete": false,
+      "userId": 10,
+      "id": 8
+    },
+    {
+      "description": "brush my teeth",
+      "completeByDate": "2020-11-21",
+      "isComplete": false,
+      "userId": 10,
+      "id": 9
     }
   ],
   "messages": [
@@ -404,6 +462,13 @@
       "userId": 1,
       "timestamp": 1605894790081,
       "id": 26
+    },
+    {
+      "text": "@bryan hi dad",
+      "messageUserId": 1,
+      "userId": 10,
+      "timestamp": 1605988033632,
+      "id": 27
     }
   ]
 }

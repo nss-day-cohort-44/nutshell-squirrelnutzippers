@@ -1,7 +1,35 @@
-.weather--card {
-  text-align: center;
+:root {
+  --weather--icon--bkg: rgb(7, 0, 121);
+  --weather--icon--bkg-gradient: linear-gradient(
+    180deg,
+    rgba(7, 0, 121, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
-.weather--card img {
+/* DARK THEME */
+[data-theme="dark"] {
+  --weather--icon--bkg: rgb(0, 80, 104);
+}
+
+.forecast__container {
+  display: flex;
+}
+
+.weather--card {
+  text-align: center;
+  border: 1px solid lightgray;
+}
+
+.weather--icon {
+  background: var(--weather--icon--bkg);
+  background: var(--weather--icon--bkg-gradient);
+}
+.weather--icon img {
   width: 50px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
 }
