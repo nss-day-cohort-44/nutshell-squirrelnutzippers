@@ -6,7 +6,7 @@ export const WeatherCard = (day) => {
 
   return `
     <div class="weather--card">
-        <div><img src="http://openweathermap.org/img/wn/${
+        <div class="weather--icon"><img src="http://openweathermap.org/img/wn/${
           day.weather[0].icon
         }@2x.png"/></div>
         <div>${day.weather[0].description}</div>

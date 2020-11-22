@@ -19,8 +19,6 @@ export const WeatherList = () => {
 };
 
 const render = () => {
-  console.log("weather: ", weather);
-
   const weatherContainer = document.getElementById("weather");
   const weatherAsHTML = weather.forecast.daily
     .slice(0, 5)
