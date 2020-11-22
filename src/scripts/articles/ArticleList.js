@@ -36,7 +36,7 @@ const render = () => {
 
   contentTarget.innerHTML = `
     <h1 class='section--header'>
-        News Articles
+        Articles
         <button id="article--add-edit">+ New Article</button>
     </h1>
     <div id="articleForm__container"></div>

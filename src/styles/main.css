@@ -63,12 +63,15 @@ body {
 
 .dashboard {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .dashboard > div {
   margin: 0 0.5rem;
-  flex-basis: 25%;
+  flex-basis: 21%;
+  min-width: 300px;
+  flex-grow: 1;
 }
 
 .category__container {
