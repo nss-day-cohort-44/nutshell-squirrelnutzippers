@@ -4,8 +4,8 @@ import "../weather/WeatherCardRow.js";
 
 export const EventCard = (eventObj) => {
   // GET TODAY'S DATE AND CLEAR THE TIME PORTION FOR COMPARING PURPOSES
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  let today = new Date();
+  today = today.setHours(0, 0, 0, 0);
 
   // FUNCTION TO GET X NUMBER OF DAYS FROM TODAY
   const getXDaysFromToday = (numOfDays) => {
@@ -29,7 +29,7 @@ export const EventCard = (eventObj) => {
     dateInRange = true;
   }
 
-  const daysFromToday = (date - today) / 86400000;
+  const daysFromToday = () => (date - today) / 86400000;
 
   const activeUser = useActiveUser();
   const eventCreator = useUsers().find((user) => user.id === eventObj.userId);
@@ -38,8 +38,8 @@ export const EventCard = (eventObj) => {
     (friend) => friend.id === eventCreator.id
   );
 
-  const eventAsHTML = `
-    <div class="event card ${isFriend ? "isFriend" : ""}">
+  return `
+    <div class="event card ${isFriend ? "isFriend" : "card-bkg"}">
         <div class="event--date">
         ${date.toLocaleDateString("en-US")}
         ${
@@ -55,7 +55,6 @@ export const EventCard = (eventObj) => {
         }
         <div>${eventObj.name}</div>
         <div>${eventObj.location}</div>
-  
         ${
           activeUser.id !== eventObj.userId
             ? `<div>created by: ${eventCreator.username}</div>`
@@ -69,10 +68,7 @@ export const EventCard = (eventObj) => {
               </div>`
             : ""
         }
-    </div>
-    `;
-
-  return eventAsHTML;
+    </div>`;
 };
 
 // EVENT LISTENERS
@@ -83,6 +79,7 @@ eventHub.addEventListener("click", (event) => {
     const [prefix, eventId] = event.target.id.split("--");
     deleteEvent(parseInt(eventId));
   }
+
   // EDIT CLICK
   if (event.target.id.startsWith("edit-event--")) {
     const [prefix, eventId] = event.target.id.split("--");
@@ -96,12 +93,29 @@ eventHub.addEventListener("click", (event) => {
   // WEATHER CLICK
   if (event.target.id.startsWith("weather-event--")) {
     const [prefix, eventId, dayIndex] = event.target.id.split("--");
-    const eventWeatherEvent = new CustomEvent("eventWeatherClicked", {
-      detail: {
-        eventId: parseInt(eventId),
-        dayIndex: parseInt(dayIndex),
-      },
-    });
-    eventHub.dispatchEvent(eventWeatherEvent);
+    // CHECK IF CLOSE OR OPEN
+    const button = document.getElementById(event.target.id);
+
+    if (event.target.innerHTML === "x Hide Weather") {
+      button.innerHTML = "+ Show Weather";
+      const closeEventWeatherEvent = new CustomEvent(
+        "closeEventWeatherClicked",
+        {
+          detail: {
+            elementId: `event-weather__container--${eventId}`,
+          },
+        }
+      );
+      eventHub.dispatchEvent(closeEventWeatherEvent);
+    } else {
+      button.innerHTML = "x Hide Weather";
+      const eventWeatherEvent = new CustomEvent("eventWeatherClicked", {
+        detail: {
+          eventId: parseInt(eventId),
+          dayIndex: parseInt(dayIndex),
+        },
+      });
+      eventHub.dispatchEvent(eventWeatherEvent);
+    }
   }
 });

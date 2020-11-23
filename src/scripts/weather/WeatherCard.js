@@ -5,7 +5,7 @@ export const WeatherCard = (day) => {
   const roundTemp = (temp) => Math.round(temp);
 
   return `
-    <div class="weather--card">
+    <div class="weather--card card-bkg">
         <div class="weather--icon"><img src="http://openweathermap.org/img/wn/${
           day.weather[0].icon
         }@2x.png"/></div>

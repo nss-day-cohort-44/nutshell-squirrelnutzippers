@@ -6,7 +6,7 @@ export const WeatherCardRow = (day) => {
   const roundTemp = (temp) => Math.round(temp);
 
   return `
-    <div class="weather--card row">
+    <div class="weather--card row card-bkg">
         <div class="weather--icon"><img src="http://openweathermap.org/img/wn/${
           day.weather[0].icon
         }@2x.png"/></div>
@@ -40,4 +40,10 @@ eventHub.addEventListener("eventWeatherClicked", (e) => {
     const eventWeatherHTML = WeatherCardRow(weatherDay);
     eventWeatherContainer.innerHTML = eventWeatherHTML;
   });
+});
+
+eventHub.addEventListener("closeEventWeatherClicked", (event) => {
+  const elementId = event.detail.elementId;
+  const contentTarget = document.getElementById(elementId);
+  contentTarget.innerHTML = "";
 });

@@ -12,7 +12,7 @@ export const TaskCard = (taskObj) => {
   );
 
   const taskAsHTML = `
-    <div class="task--card">
+    <div class="task card card-bkg">
         <div><input id="complete-task--${taskObj.id}" type="checkbox" value="${taskObj.isComplete}"></div>
         <div class="task--date">${date}</div>
         <div>${taskObj.description}</div>
