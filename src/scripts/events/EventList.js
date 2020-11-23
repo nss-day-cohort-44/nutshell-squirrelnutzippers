@@ -63,8 +63,17 @@ const render = () => {
 const eventHub = document.querySelector(".container");
 eventHub.addEventListener("click", (event) => {
   if (event.target.id === "event--add-edit") {
-    const eventAddEvent = new CustomEvent("eventAddClicked");
-    eventHub.dispatchEvent(eventAddEvent);
+    // CHECK IF CLOSE OR OPEN
+    const button = document.getElementById("event--add-edit");
+    if (event.target.innerHTML === "x Close") {
+      button.innerHTML = "+ New Event";
+      const closeEventFormEvent = new CustomEvent("closeEventFormClicked");
+      eventHub.dispatchEvent(closeEventFormEvent);
+    } else {
+      button.innerHTML = "x Close";
+      const eventAddEvent = new CustomEvent("eventAddClicked");
+      eventHub.dispatchEvent(eventAddEvent);
+    }
   }
 });
 

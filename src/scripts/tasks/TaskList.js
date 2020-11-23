@@ -46,8 +46,17 @@ const render = () => {
 const eventHub = document.querySelector(".container");
 eventHub.addEventListener("click", (event) => {
   if (event.target.id === "task--add-edit") {
-    const taskAddEvent = new CustomEvent("taskAddClicked");
-    eventHub.dispatchEvent(taskAddEvent);
+    // CHECK IF CLOSE OR OPEN
+    const button = document.getElementById("task--add-edit");
+    if (event.target.innerHTML === "x Close") {
+      button.innerHTML = "+ New Task";
+      const closeTaskFormEvent = new CustomEvent("closeTaskFormClicked");
+      eventHub.dispatchEvent(closeTaskFormEvent);
+    } else {
+      button.innerHTML = "x Close";
+      const taskAddEvent = new CustomEvent("taskAddClicked");
+      eventHub.dispatchEvent(taskAddEvent);
+    }
   }
 });
 

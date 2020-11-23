@@ -40,7 +40,6 @@ export const MessageCard = (messageObj) => {
       ) {
         isPrivate = false;
         messageClass = "private";
-        console.log(messageObj.text.split(/[@ ]/).slice(2).join(" "));
       } else {
         isPrivate = true;
       }

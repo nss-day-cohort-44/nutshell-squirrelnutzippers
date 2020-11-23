@@ -41,6 +41,10 @@ eventHub.addEventListener("taskEditClicked", (event) => {
   const contentTarget = document.querySelector("#taskForm__container");
   contentTarget.innerHTML = TaskForm(taskId);
 });
+eventHub.addEventListener("closeTaskFormClicked", (event) => {
+  const contentTarget = document.querySelector("#taskForm__container");
+  contentTarget.innerHTML = "";
+});
 
 eventHub.addEventListener("click", (event) => {
   // Check task submit button was clicked
