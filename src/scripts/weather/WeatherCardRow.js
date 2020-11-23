@@ -24,7 +24,6 @@ eventHub.addEventListener("eventWeatherClicked", (e) => {
   // get event id / find event
   const eventId = e.detail.eventId;
   const event = useEvents().find((event) => event.id === eventId);
-  console.log("event: ", event);
   const dayIndex = e.detail.dayIndex;
 
   // find weather container on DOM
@@ -36,8 +35,8 @@ eventHub.addEventListener("eventWeatherClicked", (e) => {
     const eventWeather = useEventWeather();
     console.log("eventWeather: ", eventWeather);
     const weatherDay = eventWeather.forecast.daily[dayIndex];
-
     const eventWeatherHTML = WeatherCardRow(weatherDay);
+    console.log("eventWeatherHTML: ", eventWeatherHTML);
     eventWeatherContainer.innerHTML = eventWeatherHTML;
   });
 });
