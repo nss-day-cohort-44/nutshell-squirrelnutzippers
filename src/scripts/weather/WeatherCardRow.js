@@ -33,14 +33,13 @@ eventHub.addEventListener("eventWeatherClicked", (e) => {
   // send event zip to get event weather
   getEventWeatherFromZip(event.zip).then(() => {
     const eventWeather = useEventWeather();
-    console.log("eventWeather: ", eventWeather);
     const weatherDay = eventWeather.forecast.daily[dayIndex];
     const eventWeatherHTML = WeatherCardRow(weatherDay);
-    console.log("eventWeatherHTML: ", eventWeatherHTML);
     eventWeatherContainer.innerHTML = eventWeatherHTML;
   });
 });
 
+// close event weather
 eventHub.addEventListener("closeEventWeatherClicked", (event) => {
   const elementId = event.detail.elementId;
   const contentTarget = document.getElementById(elementId);
