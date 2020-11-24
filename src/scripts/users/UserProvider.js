@@ -8,7 +8,6 @@ export const getUsers = () => {
   return fetch(`http://localhost:8088/users`)
     .then((response) => response.json())
     .then((userData) => {
-      console.log("userData", userData);
       users = userData;
     });
 };
@@ -47,8 +46,7 @@ export const getUserFriends = (id) => {
 
 const setActiveUser = (user) => {
   activeUser = user;
-  console.log("activeUser", activeUser);
-  // CUSTOM EVENT NEEDED HERE TO NOTIFY UPDATE OF ACTIVE USER
+  // CUSTOM EVENT TO NOTIFY UPDATE OF ACTIVE USER
   const activeUserUpdatedEvent = new CustomEvent("activeUserUpdated");
   eventHub.dispatchEvent(activeUserUpdatedEvent);
 };

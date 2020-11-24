@@ -16,8 +16,18 @@ eventHub.addEventListener("click", (e) => {
       .then((users) => {
         if (users.length > 0) {
           const user = users[0];
-          sessionStorage.setItem("activeUser", user.id);
-          eventHub.dispatchEvent(new CustomEvent("userAuthenticated"));
+          if (user.email === email) {
+            sessionStorage.setItem("activeUser", user.id);
+            eventHub.dispatchEvent(new CustomEvent("userAuthenticated"));
+          } else {
+            alert(
+              "Please provide the username and email you used when registering."
+            );
+          }
+        } else {
+          alert(
+            "Username not found. Please try again or register a new account."
+          );
         }
       });
   }

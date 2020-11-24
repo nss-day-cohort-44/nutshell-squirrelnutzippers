@@ -29,7 +29,7 @@ export const EventCard = (eventObj) => {
     dateInRange = true;
   }
 
-  const daysFromToday = () => (date - today) / 86400000;
+  const daysFromToday = (date - today) / 86400000;
 
   const activeUser = useActiveUser();
   const eventCreator = useUsers().find((user) => user.id === eventObj.userId);
